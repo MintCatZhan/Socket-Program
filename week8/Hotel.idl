@@ -1,0 +1,9 @@
+interface Hotel{
+
+
+string cities();
+string hotels(in string city);
+double rates();
+ 
+
+};

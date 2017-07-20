@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: RMI Client Callbacks
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> RMI Client Callbacks</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jGuru.com" TARGET="_blank"><img 
+src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" 
+alt="jGuru"></A></EM></H4>
+ [<A HREF="help.html">Help</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+<P>
+In this exercise you will build a client applet that will
+act as both a RMI client and a server.
+
+Usually applets only act as clients, however in some cases
+it makes sense for a server to make calls back into the applet.
+
+In this exercise the server will make periodic calls to
+the applet and pass it the current date and time.
+<P>
+To support a callback, the applet must act as an RMI server.
+
+It does this by exporting and implementing a remote
+interface.
+
+Our applet will define and implement the <CODE>TimeMonitor</CODE>
+interface.
+
+It is designed to be called by a time service that supplies the current
+date and time.
+</p><P>
+The server cannot call back to the applet until it knows where to find it.
+
+It is the applet's responsibility to register itself with the server.
+
+It does this by using the server's
+<CODE>registerTimeMonitor</CODE> method in the <CODE>TimeServer</CODE>
+and passes a reference to itself to the server.
+interface.
+<P>
+In this exercise, you will need to define the interfaces
+and the implementations for both the server and the Applet.
+</p><A HREF="../../RMI.html#RMIClientSideCallbacks">RMI Client Side 
+Callbacks</A></P>
+<H3>Skeleton Code</H3>
+<UL><CODE>
+<A HREF="TimeMonitor.java">TimeMonitor.java</A><BR>
+<A HREF="TimeServer.java">TimeServer.java</A><BR>
+<A HREF="RMIServer.java">RMIServer.java</A><BR>
+<A HREF="Applet1.java">Applet1.java</A><BR></CODE>
+</UL>
+<P>
+<H3>Tasks</H3>
+<BR>
+<OL>
+<A HREF="help.html#1"><LI></A>
+<P>
+
+
+
+Define and compile the <CODE>TimeMonitor</CODE> interface.
+<P>
+<A HREF="help.html#2"><LI></A>
+<P>
+
+
+
+Define and compile the <CODE>TimeServer</CODE> interface.
+
+<P>
+<A HREF="help.html#3"><LI></A>
+<P>
+
+
+
+Complete the implementation for the method <CODE>registerTimeMonitor</CODE> in 
+RMIServer.
+
+<P>
+<A HREF="help.html#4"><LI></A>
+<P>
+
+
+
+Complete the definition of the class TimeTicker.
+
+<P>
+<A HREF="help.html#5"><LI></A>
+<P>
+
+
+
+Compile the server, RMIServer and create the <CODE>stub</CODE> and 
+<CODE>skeleton</CODE> files.
+
+<P>
+<A HREF="help.html#6"><LI></A>
+<P>
+
+
+
+Prepare the Applet for execution.
+
+<P>
+<A HREF="help.html#7"><LI></A>
+<P>
+
+
+
+Start the RMI Server in its own DOS console. 
+
+<P>
+<A HREF="help.html#8"><LI></A>
+<P>
+
+
+
+Start the Applet with the appletviewer.
+
+</OL>
+
+<P>
+Where help exists, the task numbers above are linked to the
+step-by-step <A HREF="help.html">help</A> page.
+
+<H3>Solution Source</H3>
+<P>
+
+<UL><CODE>
+<A HREF=solution/TimeMonitor.java>TimeMonitor.java</A><BR>
+<A HREF=solution/TimeServer.java>TimeServer.java</A><BR>
+<A HREF=solution/RMIServer.java>RMIServer.java</A><BR>
+<A HREF=solution/Applet1.java>Applet1.java</A><BR></CODE>
+</UL>
+<H3>Demonstration</H3>
+<P>
+When the server is run in its DOS console, the output will be:
+
+<pre>Registry created
+Bindings Finished
+Waiting for Client requests</pre>
+<P>
+Then when applet is run in its DOS console, the output will be:
+
+<pre>Exporting the Applet
+Looking up TimeService at: 
+  rmi://&lt;your_computer_name&gt;:10005/TimeServer
+We have been registered!</pre>
+<P>
+The applet will appear in a window and start to display the current date and
+time every two seconds.
+
+<H4><A HREF="../BootstrapExample/index.html">Next Magercise</A></H4>
+<H4><A HREF="../../exercises.html">Exercises</A></H4>
+<H4><A HREF="../../RMI.html">Short Course</A></H4>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A 
+HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

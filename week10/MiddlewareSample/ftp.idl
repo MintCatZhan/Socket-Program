@@ -1,0 +1,14 @@
+module week10{
+	module corba {
+	  typedef sequence<string> string_seq;
+	
+	  interface FileTransfer {
+	    boolean chdir(in string dir);
+	    string_seq dir();
+	    string getdir();
+	    string get(in string filename);
+	    void quit();
+	  };
+   };
+};
+	

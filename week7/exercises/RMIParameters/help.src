@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Help: RMI Parameters
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> RMI Parameters</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jguru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="index.html">Exercise</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+Help is available for each task.
+<P>
+<BR><BR>
+<OL>
+<A NAME="1"><H3>Task 1</H3></A>
+
+<P>
+
+Add the <CODE>getMessageObject</CODE> method to the <CODE>Hello</CODE> interface.
+
+
+<HR WIDTH="80%">
+
+<P>
+
+In the file <CODE>Hello.java</CODE> add the following method to the
+interface definition:
+<CODE>MessageObject getMessageObject() throws RemoteException;</CODE>
+
+<p>
+<A NAME="2"><H3>Task 2</H3></A>
+
+<P>
+
+Create an implementation for the <CODE>getMessageObject</CODE> method in the <CODE>HelloImpl</CODE> class.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+
+Add the <CODE>getMessageObject</CODE> remote method and return a new instance of the <CODE>MessageObject</CODE> class.
+<P>
+You can use the following code:
+<PRE>
+public MessageObject getMessageObject() 
+              throws RemoteException
+{
+  return new MessageObject();
+}
+</PRE>
+
+<A NAME="3"><H3>Task 3</H3></A>
+
+<P>
+
+Compile all of the class files for the server and its remote objects.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+
+Use the <CODE>javac</CODE> program:
+<pre>javac *.java</pre>
+
+<p>
+<A NAME="4"><H3>Task 4</H3></A>
+
+<P>
+
+Create the <CODE>stub</CODE> and <CODE>skeleton</CODE> files for the remote object implementation.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+
+Use the <CODE>rmic</CODE> utility on the implementation class, <CODE>HelloImpl</CODE>.
+<br>
+<br>
+<CODE>rmic HelloImpl</CODE>
+
+<p>
+<A NAME="5"><H3>Task 5</H3></A>
+
+<P>
+
+Start the RMI Server in its own DOS console. 
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+
+Start a new DOS console program.
+Change the current directory to the location of your .java files for the server.
+
+Run <CODE>RMIServer</CODE> with the <CODE>java</CODE> utility:
+<pre>java RMIServer</pre>
+
+<p>
+<A NAME="6"><H3>Task 6</H3></A>
+
+<P>
+
+Start the RMI Client in its own DOS console. 
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+
+Start a new DOS console program.
+Change the current directory to the location of your .java files for the client.
+
+Run <CODE>RMIClient</CODE> with the <CODE>java</CODE> utility:
+<pre>java RMIClient</pre>
+
+
+</OL>
+
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

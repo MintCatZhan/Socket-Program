@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Help: Simple Banking System
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> Simple Banking System</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jguru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="index.html">Exercise</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+Help is available for each task.
+<P>
+<BR><BR>
+<OL>
+<A NAME="1"><H3>Task 1</H3></A>
+
+<P>
+Run the RMI Registry program.
+<p>
+<HR WIDTH="80%">
+
+<P>
+The RMI Registry program is provided as a separate
+executable in the <CODE>rmiregistry</CODE> program.
+
+
+<P>
+Create a console and move to the directory that will
+contain your code from this exercise.
+</p>
+
+<P>
+From that location, run the registry with the following
+command:
+
+<pre>rmiregistry</pre>
+<A NAME="2"><H3>Task 2</H3></A>
+
+<P>
+Copy all the <CODE>.class</CODE> files to a directory.
+</p>
+<HR WIDTH="80%">
+
+<P>
+Right-click on each file to save them.
+<P>
+Source files are provided with the solution if you would like to generate them yourself.
+<p>
+<A NAME="3"><H3>Task 3</H3></A>
+
+<P>
+Run the RMI server that hosts the remote service objects.
+<p>
+<HR WIDTH="80%">
+
+<P>
+In this exercise, the server and the exported remote objects have been created for you.
+
+<P>
+You simple need to start the host program, <CODE>BankSystemServer</CODE>.
+
+
+<P>
+This is accomplished by creating a new console,
+moving to the directory which containts your code
+from this exercise and running the following program:
+<CODE>java BankSystemServer</CODE>
+<p>
+<A NAME="4"><H3>Task 4</H3></A>
+
+<P>
+Create and run a program that will use the exported RMI services. Find out the owner of account 4461 and
+how much money is in it.
+<p>
+<HR WIDTH="80%">
+
+<P>
+A skeleton file for the <A HREF="BankUser.java"><CODE>BankUser</CODE></A> client program is provided.
+
+
+<P>
+Using the remote service interface definitions as a guide to complete the code for <CODE>BankUser</CODE>.
+
+
+<P>
+Then compile and run this program to see your RMI system in action!
+
+</OL>
+
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

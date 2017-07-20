@@ -1,0 +1,12 @@
+java GreetingServer 6066
+
+java GreetingClient localhost 6066
+
+
+
+
+
+try {
+Thread.sleep(1000L);    // one second
+}
+catch (Exception e) {}     // this never happen... nobody check for it

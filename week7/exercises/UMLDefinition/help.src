@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Help: UML Definition of RMI Example System
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> UML Definition of RMI Example System</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jguru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="index.html">Exercise</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+Help is available for each task.
+<P>
+<BR><BR>
+<OL>
+<A NAME="1"><H3>Task 1</H3></A>
+
+<P>
+Observe the UML Diagram for the banking system
+<p>
+<HR WIDTH="80%">
+
+<P>
+You will find the UML diagram on the introduction page for this exercise.
+<p>
+<A NAME="2"><H3>Task 2</H3></A>
+
+<P>
+Complete the code to define the interfaces in this system
+
+<HR WIDTH="80%">
+
+<P>
+Be sure that each interface extends
+<CODE><A HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">Remote</A></CODE> and that each method
+declares that it may throw a
+<CODE>
+<A HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/RemoteException.html">RemoteException
+</A></CODE>
+object.
+
+</OL>
+</P>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Simple Banking System
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- Start Body Insert-->
+<BODY BGCOLOR="#ffffff">
+<!-- End Body Insert-->
+
+<!-- Start PageTop Insert -->
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <TR ALIGN="CENTER" VALIGN="TOP">
+    <TD WIDTH="157" ALIGN="LEFT">
+    <IMG SRC="/images/pixel.gif" HEIGHT="40" WIDTH="40" ALT="">
+    <A HREF="http://java.sun.com/index.html"><IMG SRC="/images/javalogo52x88.gif" WIDTH="52" HEIGHT="88" ALT="Java Technology Home Page" BORDER="0"></A>
+    <BR>
+    <IMG SRC="/images/pixel.gif" WIDTH="157" HEIGHT="1" ALT=""></TD>
+
+    <TD>
+
+    <FORM NAME="seek1" METHOD="GET" ACTION="http://search.java.sun.com/query.html">
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+      <TR>
+        <TD ALIGN="RIGHT">
+        <IMG SRC="/images/stripelt.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+        
+        <TD WIDTH="100%">
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+          <TR>
+            <TD BGCOLOR="#CC9966" WIDTH="100%">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+        </TABLE>
+        </TD>
+        
+        <TD ALIGN="LEFT">
+        <IMG SRC="/images/stripert.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+
+        <TD>
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+          <TR>
+            <TD VALIGN="CENTER">
+            <A HREF="http://java.sun.com/a-z/index.html"><IMG SRC="/images/azindex.gif" BORDER="0" WIDTH="72" HEIGHT="11" ALT="A-Z Index"></A></TD>
+              
+            <TD VALIGN="CENTER">
+            <FONT FACE="Helvetica" SIZE="1">
+            <INPUT TYPE="text" SIZE="15" MAXLENGTH="128" NAME=qt></FONT></TD>
+            
+            <TD VALIGN="CENTER">
+            <INPUT TYPE="image" SRC="/images/search.button.gif" 
+              value="search" BORDER="0" WIDTH="55" HEIGHT="14" ALT="Search"></TD>
+          </TR>
+        </TABLE>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+    <P>
+
+    <TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+      <TR VALIGN="TOP">
+        <TD WIDTH="100%"><IMG SRC="/images/chiclet.row.gif" WIDTH="55" 
+          HEIGHT="18" ALT=""></TD>
+          
+        <TD ROWSPAN="4" ALIGN="RIGHT" WIDTH="152">
+        <A HREF="/developer/index.html"><IMG SRC="/images/developer.connection.header.gif" BORDER="0" HEIGHT="42" WIDTH="319" ALT="Java Developer Connection(SM)"></A></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#FFFFFF" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#CC9966" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD><A HREF="/developer/onlineTraining/"><IMG SRC="/images/online-training.gif" ALT="Online Training" BORDER=0></A></TD>
+      </TR>
+    </TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+<!-- End PageTop Insert -->
+
+<!-- Start NavBar Insert -->
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="3" BGCOLOR="#FFFFFF" WIDTH="157" ALIGN="LEFT">
+
+<!-- tab categories -->
+
+<TR>
+<TD><A HREF="http://java.sun.com/products/"><IMG SRC="/images/side.tab.products.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Downloads, APIs, Documentation"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/index.html"><IMG SRC="/images/side.tab.developer.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Java Developer Connection"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/infodocs/index.shtml"><IMG SRC="/images/side.tab.docs.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Tutorials, Tech Articles, Training"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/support/index.html"><IMG SRC="/images/side.tab.support.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Online Support"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/community/index.html"><IMG SRC="/images/side.tab.community.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Community Discussion"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/industry/"><IMG SRC="/images/side.tab.news.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="News &amp; Events from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/solutions"><IMG SRC="/images/side.tab.solutions.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Products from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/casestudies"><IMG SRC="/images/side.tab.case.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="How Java Technology is Used Worldwide"></A></TD>
+</TR>
+<TR>
+<TD>    <DIV ALIGN="RIGHT">
+    <A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+    </DIV>
+</TD>
+</TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+
+<!-- End NavBar Insert -->
+
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> Simple Banking System</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jGuru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="help.html">Help</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+<P>
+This exercise leads you through the creation
+of your first RMI system.
+<P>
+In this exercise, you will run the RMI Registry (which
+will manage the publication of the RMI remote services),
+run a server program that creates
+the actual remote services, and finally,
+finish coding the program <CODE>BankUser</CODE>, which will
+use the RMI remote services.
+
+<H3>Prerequisites</H3>
+<UL>
+<A HREF="../../exercises/UMLDefinition/index.html">UML Definition of RMI Example System</A> </UL>
+<H3>Skeleton Code</H3>
+<UL><CODE>
+<A HREF="Account.class">Account.class</A><BR>
+<A HREF="AccountImpl.class">AccountImpl.class</A><BR>
+<A HREF="AccountImpl_Stub.class">AccountImpl_Stub.class</A><BR>
+<A HREF="AccountImpl_Skel.class">AccountImpl_Skel.class</A><BR>
+<A HREF="BankManager.class">BankManager.class</A><BR>
+<A HREF="BankManagerImpl.class">BankManagerImpl.class</A><BR>
+<A HREF="BankManagerImpl_Stub.class">BankManagerImpl_Stub.class</A><BR>
+<A HREF="BankManagerImpl_Skel.class">BankManagerImpl_Skel.class</A><BR>
+<A HREF="Client.class">Client.class</A><BR>
+<A HREF="ClientImpl.class">ClientImpl.class</A><BR>
+<A HREF="ClientImpl_Stub.class">ClientImpl_Stub.class</A><BR>
+<A HREF="ClientImpl_Skel.class">ClientImpl_Skel.class</A><BR>
+<A HREF="NoCashAvailableException.class">NoCashAvailableException.class</A><BR>
+<A HREF="BankSystemServer.class">BankSystemServer.class</A><BR>
+<A HREF="BankUser.java">BankUser.java</A></CODE>
+</UL>
+<P>
+<H3>Tasks</H3>
+<BR>
+<OL>
+<A HREF="help.html#1"><LI></A>
+<P>
+
+<P>
+Run the RMI Registry program.
+<P>
+<A HREF="help.html#2"><LI></A>
+<P>
+
+Copy all the <CODE>.class</CODE> files to a directory.
+<p>
+
+<A HREF="help.html#3"><LI></A>
+<P>
+
+<P>
+Run the RMI server that hosts the remote service objects.
+<P>
+
+<A HREF="help.html#4"><LI></A>
+<P>
+
+Create and run a program that will use the exported RMI services. Find out the owner of account 4461 and
+how much money is in it.
+
+</OL>
+
+<P>
+Where help exists, the task numbers above are linked to the
+step-by-step <A HREF="help.html">help</A> page.
+
+<P>
+When you finish this exercise, you will have run your first RMI system.
+<P>
+It consists of three major parts:
+<p>
+
+<UL>
+    <LI>
+    The RMI Registry that hold references to the remote services.
+    
+    <LI>
+    The RMI host server program that creates the remote services, 
+    registers them with the registry and waits for client requests.
+    
+    <LI>
+    The RMI client program. A program that obtains references to remote 
+    service object from the RMI registry and then uses those services.
+   
+</UL>
+<H3>Solution Source</H3>
+<UL><CODE>
+<A HREF=solution/Account.java>Account.java</A><BR>
+<A HREF=solution/Account.class>Account.class</A><BR>
+<A HREF=solution/AccountImpl.java>AccountImpl.java</A><BR>
+<A HREF=solution/AccountImpl.class>AccountImpl.class</A><BR>
+<A HREF=solution/AccountImpl_Stub.class>AccountImpl_Stub.class</A><BR>
+<A HREF=solution/AccountImpl_Skel.class>AccountImpl_Skel.class</A><BR>
+<A HREF=solution/BankManager.java>BankManager.java</A><BR>
+<A HREF=solution/BankManager.class>BankManager.class</A><BR>
+<A HREF=solution/BankManagerImpl.java>BankManagerImpl.java</A><BR>
+<A HREF=solution/BankManagerImpl.class>BankManagerImpl.class</A><BR>
+<A HREF=solution/BankManagerImpl_Stub.class>BankManagerImpl_Stub.class</A><BR>
+<A HREF=solution/BankManagerImpl_Skel.class>BankManagerImpl_Skel.class</A><BR>
+<A HREF=solution/BankUser.java>BankUser.java</A><BR>
+<A HREF=solution/BankUser.class>BankUser.class</A><BR>
+<A HREF=solution/Client.java>Client.java</A><BR>
+<A HREF=solution/Client.class>Client.class</A><BR>
+<A HREF=solution/ClientImpl.java>ClientImpl.java</A><BR>
+<A HREF=solution/ClientImpl.class>ClientImpl.class</A><BR>
+<A HREF=solution/ClientImpl_Stub.class>ClientImpl_Stub.class</A><BR>
+<A HREF=solution/ClientImpl_Skel.class>ClientImpl_Skel.class</A><BR>
+<A HREF=solution/NoCashAvailableException.java>NoCashAvailableException.java</A><BR>
+<A HREF=solution/NoCashAvailableException.class>NoCashAvailableException.class</A><BR>
+<A HREF=solution/BankSystemServer.java>BankSystemServer.java</A><BR>
+<A HREF=solution/BankSystemServer.class>BankSystemServer.class</A><BR></CODE>
+</UL>
+<H3>Demonstration</H3>
+<P>
+<P>
+When the RMI Registry and the RMI host sever program
+are run, there is no observable behavior.
+
+When the RMI client <CODE>BankUser</CODE> is run,
+the console will display what ever messages you
+include in the program.</p>
+<P>
+The solution specifically displays:<CODE>
+Charlie's account has $600.00
+</CODE>
+<H4><A HREF="../RMIParameters/index.html">Next Magercise</A></H4>
+<H4><A HREF="../../exercises.html">Exercises</A></H4>
+<H4><A HREF="../../RMI.html">Short Course</A></H4>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 
+<A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- Copyright Insert -->
+
+<BR CLEAR="ALL">
+
+<FORM ACTION="/cgi-bin/search.cgi" METHOD="POST">
+<TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="5">   
+  <TR>
+    <TD VALIGN="BOTTOM">
+
+
+</TD>
+</TR>
+<A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+	
+    <CENTER>
+    <FONT SIZE="-1" COLOR="#999999" FACE="Verdana, Arial, Helvetica, sans-serif">
+    [ This page was updated: <!-- new date --> 11-Feb-2000 ]
+</font></CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+  
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/products/">Products &amp; APIs</A> | 
+    <A HREF="/developer/index.html">Developer Connection</A> | 
+    <A HREF="/developer/infodocs/index.shtml">Docs &amp; Training</A> | 
+    <A HREF="/developer/support/index.html">Online Support</A><BR>
+    <A HREF="/developer/community/index.html">Community Discussion</A> |
+    <A HREF="http://java.sun.com/industry/">Industry News</A> | 
+    <A HREF="http://java.sun.com/solutions">Solutions Marketplace</A> | 
+    <A HREF="http://java.sun.com/casestudies">Case Studies</A>
+    </FONT>
+    </CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+
+  <TR>
+    <TD ALIGN="CENTER">
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/docs/glossary.html">Glossary</A> - 
+    <A HREF="http://java.sun.com/applets/">Applets</A> - 
+    <A HREF="http://java.sun.com/docs/books/tutorial/">Tutorial</A> - 
+    <A HREF="http://java.sun.com/jobs/">Employment</A> - 
+    <A HREF="http://java.sun.com/nav/business/">Business &amp; Licensing</A> - 
+    <A HREF="http://java.sun.com/javastore/">Java Store</A> -
+    <A HREF="http://java.sun.com/casestudies/">Java in the Real World</A>
+    </FONT>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <a href="/siteinfo/faq.html">FAQ</a> |
+    <a href="/feedback/index.html">Feedback</a> | 
+    <a href="http://www.dynamicdiagrams.net/mapa/cgi-bin/help.tcl?db=javasoft&dest=http://java.sun.com/">Map</a> | 
+    <A HREF="http://java.sun.com/a-z/index.html">A-Z Index</A>
+    </FONT>
+    </CENTER>
+
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD>
+
+    <TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="0">
+      <TR>
+        <TD WIDTH="50%">
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        For more information on Java technology<BR>
+        and other software from Sun Microsystems, call:<BR>
+        </FONT>
+        <FONT SIZE="-1" FACE="Verdana, Arial, Helvetica, sans-serif">
+        (800) 786-7638<BR></FONT>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Outside the U.S. and Canada, dial your country's 
+        <A HREF="http://www.att.com/business_traveler/attdirecttollfree/">AT&amp;T&nbsp;Direct&nbsp;Access&nbsp;Number</A> first.<BR>
+        </FONT>
+        </TD>
+
+        <TD ALIGN="RIGHT" WIDTH="50%">
+        <A HREF="http://www.sun.com"><IMG SRC="/images/lgsun.gif" width="64" height="30" border="0" ALT="Sun Microsystems, Inc."></A><BR>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Copyright &copy; 1995-2000
+        <A HREF="http://www.sun.com">Sun Microsystems, Inc.</A><BR>
+        All Rights Reserved. 
+        <A HREF="http://www.sun.com/share/text/termsofuse.html">Terms of Use</A>. 
+        <A HREF="http://www.sun.com/privacy/">Privacy&nbsp;Policy</A>.
+        </FONT>
+        </TD>
+      </TR>
+    </TABLE>
+	
+    </TD>
+  </TR> 
+</TABLE>
+</FORM>
+
+<!-- End Copyright Insert -->
+
+
+</BODY>
+</HTML>

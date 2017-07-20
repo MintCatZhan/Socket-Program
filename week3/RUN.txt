@@ -1,0 +1,14 @@
+javac all files of java extention
+
+1. java FileTransferTextServer (at one command prompt terminal)
+
+2. java FileTransferTextClient localhost (at second command prompt terminal)
+
+
+commands
+
+cd
+dir
+cd test
+cd ..
+cd ..

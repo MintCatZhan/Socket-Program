@@ -1,0 +1,702 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Exercises: <br>Fundamentals of RMI
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="Description Goes Here">
+  <META NAME="KEYWORDS" CONTENT="Keyword Listing Goes Here">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src	1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- Start Body Insert-->
+<BODY BGCOLOR="#ffffff">
+<!-- End Body Insert-->
+
+<!-- Start PageTop Insert -->
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <TR ALIGN="CENTER" VALIGN="TOP">
+    <TD WIDTH="157" ALIGN="LEFT">
+    <IMG SRC="/images/pixel.gif" HEIGHT="40" WIDTH="40" ALT="">
+    <A HREF="http://java.sun.com/index.html"><IMG SRC="/images/javalogo52x88.gif" WIDTH="52" HEIGHT="88" ALT="Java Technology Home Page" BORDER="0"></A>
+    <BR>
+    <IMG SRC="/images/pixel.gif" WIDTH="157" HEIGHT="1" ALT=""></TD>
+
+    <TD>
+
+    <FORM NAME="seek1" METHOD="GET" ACTION="http://search.java.sun.com/query.html">
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+      <TR>
+        <TD ALIGN="RIGHT">
+        <IMG SRC="/images/stripelt.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+        
+        <TD WIDTH="100%">
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+          <TR>
+            <TD BGCOLOR="#CC9966" WIDTH="100%">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+        </TABLE>
+        </TD>
+        
+        <TD ALIGN="LEFT">
+        <IMG SRC="/images/stripert.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+
+        <TD>
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+          <TR>
+            <TD VALIGN="CENTER">
+            <A HREF="http://java.sun.com/a-z/index.html"><IMG SRC="/images/azindex.gif" BORDER="0" WIDTH="72" HEIGHT="11" ALT="A-Z Index"></A></TD>
+              
+            <TD VALIGN="CENTER">
+            <FONT FACE="Helvetica" SIZE="1">
+            <INPUT TYPE="text" SIZE="15" MAXLENGTH="128" NAME=qt></FONT></TD>
+            
+            <TD VALIGN="CENTER">
+            <INPUT TYPE="image" SRC="/images/search.button.gif" 
+              value="search" BORDER="0" WIDTH="55" HEIGHT="14" ALT="Search"></TD>
+          </TR>
+        </TABLE>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+    <P>
+
+    <TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+      <TR VALIGN="TOP">
+        <TD WIDTH="100%"><IMG SRC="/images/chiclet.row.gif" WIDTH="55" 
+          HEIGHT="18" ALT=""></TD>
+          
+        <TD ROWSPAN="4" ALIGN="RIGHT" WIDTH="152">
+        <A HREF="/developer/index.html"><IMG SRC="/images/developer.connection.header.gif" BORDER="0" HEIGHT="42" WIDTH="319" ALT="Java Developer Connection(SM)"></A></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#FFFFFF" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#CC9966" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD><A HREF="/developer/onlineTraining/"><IMG SRC="/images/online-training.gif" ALT="Online Training" BORDER=0></A></TD>
+      </TR>
+    </TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+<!-- End PageTop Insert -->
+
+<!-- Start NavBar Insert -->
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="3" BGCOLOR="#FFFFFF" WIDTH="157" ALIGN="LEFT">
+
+<!-- tab categories -->
+
+<TR>
+<TD><A HREF="http://java.sun.com/products/"><IMG SRC="/images/side.tab.products.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Downloads, APIs, Documentation"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/index.html"><IMG SRC="/images/side.tab.developer.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Java Developer Connection"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/infodocs/index.shtml"><IMG SRC="/images/side.tab.docs.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Tutorials, Tech Articles, Training"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/support/index.html"><IMG SRC="/images/side.tab.support.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Online Support"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/community/index.html"><IMG SRC="/images/side.tab.community.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Community Discussion"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/industry/"><IMG SRC="/images/side.tab.news.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="News &amp; Events from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/solutions"><IMG SRC="/images/side.tab.solutions.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Products from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/casestudies"><IMG SRC="/images/side.tab.case.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="How Java Technology is Used Worldwide"></A></TD>
+</TR>
+<TR>
+<TD>    <DIV ALIGN="RIGHT">
+    <A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+    </DIV>
+</TD>
+</TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+
+<!-- End NavBar Insert -->
+
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2><FONT SIZE="4">Fundamentals of RMI</FONT><BR>
+      Exercises</H2>
+  <H3><EM>By 
+  <A HREF="http://www.jguru.com"><img src="images/jguru-xxxsm.gif" width=66 
+height=20 border="0" alt="jGuru"></A></EM></H3>
+  <FONT SIZE="-1">
+ [<A HREF="RMI.html">Short Course</A>|
+  <A HREF="index.html">About This Short Course</A>]
+  </FONT>
+  </DIV>
+
+<P>
+
+<P>
+Welcome to jGuru.com exercises for the <em>Fundamentals of RMI</em> short 
+course.  
+<P>
+These exercises illustrate the use of the Remote Method Invocation (RMI) 
+library for implementing distributed objects.
+<P>
+When you finish these exercises, you will have a good idea of the essential
+concepts involved in building RMI-based distributed Java systems.
+
+With this foundation, you will be able to design and implement
+dsophisticated, multi-computer Java<FONT SIZE="-2"><SUP>TM</SUP></FONT> 
+programs.
+
+
+<H3>Exercise Outline</H3>
+
+<UL>
+  <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  <A HREF="#About">About Exercises</A></FONT>
+    <UL>
+      <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+      <A HREF="#Anatomy">The Anatomy of an Exercise</A></FONT>
+      
+      <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+      <A HREF="#DesignGoals">Exercise Design Goals</A></FONT>
+    </UL>
+    </UL>
+    <UL>
+      <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+      <A HREF="#Exercises">Fundamentals of RMI Exercises</A>
+</FONT>
+
+  <OL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M1">UML Definition of RMI Example System</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M2">Simple Banking System</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M3">RMI Parameters</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M4">RMI Client Callbacks </A>
+</FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M5">Bootstrap Example</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M6">Distributed Garbage Collection</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M7">Serializing Remote Objects: Server</A>
+</FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="#M8">Serializing Remote Objects: Client</A>
+</FONT>
+  </OL>
+</UL>
+
+
+
+<A NAME="About"></A>
+<H3>About Exercises</H3>
+
+A jGuru <EM>exercise</EM> is a flexible exercise that provides varying levels 
+of help according to the student's needs.  Some students may complete the 
+exercise using only the information and the task list in the exercise 
+body; some may want a few hints (Help); while others may want a step-by-step 
+guide to successful completion (Solution). Since complete solutions
+are provided in addition to help, students can skip an exercise and still be 
+able to complete later exercises that required the skipped 
+one(s).
+
+<A NAME="Anatomy"></A>
+<H3>The Anatomy of an Exercise</H3>
+
+Each exercise includes a list of any prerequisite exercises, a list 
+of skeleton code for you to start with, links to necessary API pages, 
+and a text description of the exercise's educational goal. In addition, 
+buttons link you to the following information:
+
+<UL>
+  <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  <STRONG>Help</STRONG>: Gives you help or hints on the 
+  current exercise, an annotated solution. For ease of use, 
+  the task information is duplicated on the help page with the 
+  actual help information indented beneath it.</FONT>
+
+  <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  <STRONG>Solution</STRONG>: The <CODE>&lt;applet&gt;</CODE> 
+  tag and Java source resulting in the expected behavior.
+</FONT>
+
+  <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  <STRONG>API Documentation</STRONG>: A link directly to 
+  any necessary online API documentation.
+</FONT>
+</UL>
+
+<A NAME="DesignGoals"></A>
+<H3>Exercise Design Goals</H3>
+
+There are three fundamental exercise types that you may encounter:
+
+<DL>
+  <DT><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><STRONG>&quot;Blank 
+screen&quot;</STRONG></FONT>
+    <DD><FONT FACE="Verdana, Arial, Helvetica, sans-serif">You are confronted 
+with a &quot;blank screen&quot; and
+    you
+create the entire desired functionality yourself.</font>
+
+  <DT>
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  <STRONG>Extension</STRONG></FONT>
+    <DD><FONT FACE="Verdana, Arial, Helvetica, sans-serif">You extend the 
+functionality of an existing,
+    correctly-working program.</FONT>
+
+  <DT><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif"><STRONG>Repair</STRONG>
+    <DD>You repair undesirable behavior in an existing 
+    program.</FONT>
+</DL>
+
+<P>
+To make learning easier, exercises, where possible, address only 
+the specific technique being taught in that exercise. Irrelevant, 
+unrelated, and overly complex materials are avoided.
+
+<P>
+Where possible, exercises execute via the web. However, exercises 
+that must access Java features or library elements that could cause 
+security violations are not executed on the web.
+
+<H4 ALIGN="RIGHT"><A HREF="#top">Back to Top</A></H4>
+
+<H3><a name="Exercises">Fundamentals of RMI Exercises</a></H3>
+
+<ol>
+<A NAME="M1"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/UMLDefinition/index.html">
+UML Definition of RMI Example System</a></strong></font>
+<P>
+<P>This exercise will introduce you to the definition of RMI remote services 
+using Java interfaces.<P>Educational goals:<ul>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Introduce the UML 
+Description of a banking system</FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Complete the Java 
+source code for the system interfaces</FONT>
+</ul>
+
+<A NAME="M2"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/SimpleBankingSystem/index.html">
+Simple Banking System</a></FONT></strong>
+<P>
+<P>
+In this exercise you will run your first RMI system.
+
+It is based on the Banking System that you started
+in the previous exercise.
+<P>
+Educational goals:
+<ul>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Learn to run the RMI Registry as a separate process
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Run a server that support remote RMI objects
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Implement an RMI client that uses remote services.
+    </FONT>
+</ul>
+
+<A NAME="M3"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/RMIParameters/index.html">
+RMI Parameters</a></FONT></strong>
+<P>
+<P>
+When a remote method is called, parameters may be passed to the
+remote object and a return value may be sent back to the calling program.
+This exercise explores how RMI handles primitive data types, normal
+local Java objects, and remote RMI objects as parameters and return values.
+<P>Educational goals:<ul>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Practice defining and 
+implementing remote interfaces and their implementations.</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Learn how remote 
+objects and normal objects are passed as parameters.</FONT>
+</ul>
+
+
+<A NAME="M4"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/RMICallback/index.html">
+RMI Client Callbacks</a></FONT></strong>
+<P>
+<P>
+In some RMI systems, it will make sense for a server to make calls
+to a client program.
+This can be done using client-side callbacks.
+<P>
+It is very easy to build client-side callbacks with RMI.
+One simply creates a client-side remote object and gives a reference
+to it to the server.
+The server then uses this remote reference to call into the client's
+program.
+<P>Educational goals:<ul>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Learn how to create 
+client-side remote objects.</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Prepare and export 
+remote objects that do notdirectly extend 
+<CODE>java.rmi.server.UnicastRemoteObject</CODE></FONT>
+</ul>
+
+
+<A NAME="M5"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/BootstrapExample/index.html">
+Bootstrap Example</a></FONT></strong>
+<P>
+<P>
+This exercise has three components: bootstrap HTTP Server, bootstrap RMI 
+Server and
+bootstrap RMI Client. They will highlight how RMI supports the distributed, 
+on-demand loading of class files via FTP and HTTP servers.
+<P>
+To start with, you will first run a simple server that
+delivers Java class files through the HTTP protocol.
+<P>
+Next, you will create and run the bootstrap RMI Server. The server is very 
+similar to other RMI Servers you have run.
+One of the main differences in this example is that the RMI client
+code is located in the same directory as the server.
+It will be up to the HTTP Server to deliver the client classes
+to the client computer.
+<P>
+Finally, you will create a very thin client program.
+The sole purpose of this program is to start and then
+request the 'real' client software from the network.
+The requests for Java classes will be serviced by the
+HTTP Server that you ran earlier in the exercise.
+<P>Educational goals:<ul>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Observe an HTTP Server supplying classes to an RMI system
+    </FONT> 
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Observe how to write a simple HTTP Server
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Create and run an RMI Server program
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+	Build a bootstrap program to load the client program over the network
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+      Run the Bootstrap Client and observe how the HTTP Server program
+      reports which classes have been requested and supplied
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+      Learn about the <CODE>java.rmi.server.codebase</CODE> system property
+    </FONT>
+</ul>
+
+<A NAME="M6"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/DistributedGarbageCollector/index.html">
+Distributed Garbage Collection</a></FONT></strong>
+<P>
+<P>
+The Distributed Garbage Collector and the local Java garbage collector work
+together to manage heap memory space in each Java<FONT 
+SIZE="-2"><SUP>TM</SUP></FONT> Virtual Machine<A 
+HREF="#TJVM"><SUP>1</SUP></A>(JVM) that participate in 
+an RMI system.
+In this exercise, you will have the opportunity to experiment with
+an RMI Server and two RMI Clients to observe how memory is managed.
+<P>Educational goals:<ul>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Observe the behavior 
+of the Distributed Garbage Collector.</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Observe the 
+interaction of the local and distributed garbage collectors.</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Experiment with 
+different settings for the Java heap and notice
+how it affects the operation of the two garbage collectors.</FONT>
+</ul>
+
+<A NAME="M7"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/LocalRemoteServer/index.html">
+Serializing Remote Objects: Server</a></FONT></strong>
+<P>
+<P>
+This exercise illustrates how to use the Delegation Pattern
+to create a system that will allow a network service to migrate between
+a local machine JVM and the remote server.
+<P>
+This is a simple version of a Delegation architecture.
+More sophisticated architectures can be build by expanding on this example.
+<P>
+This is a two-part exercise.
+Run the server first and then the client to complete the example.
+<P>Educational goals:<ul>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Understand how RMI 
+limits the ability to move remote objects between JVMs.</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">See how to use the 
+Delegation Pattern to overcome this limitation.</FONT>
+</ul>
+
+<A NAME="M8"></A>
+<strong><LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><a 
+href="exercises/LocalRemoteClient/index.html">
+Serializing Remote Objects: Client</font></a></strong>
+<P>
+<P>
+The client program will request both a remote reference to a service and a 
+local
+copy of an object that implements the service.
+<P>Educational goals:<ul>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">See how to build an 
+RMI client that uses either a remote reference to a service or a local 
+copy.</FONT>
+</ul>
+</ol>
+<P>
+<H4><A HREF="RMI.html">Short Course</A></H4>
+<H4><A HREF="index.html">About This Short Course</A></H4>
+<H4><A HREF="index.html">Feeback</A></H4>
+<H4><A HREF="#top">Back to Top</A></H4>
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <a 
+href="http://www.jguru.com">jGuru.com</a>. All Rights Reserved.</font>
+
+<P>
+_______<BR>
+<A NAME="TJVM"><SUP>1</SUP></A> As used on this web site, the terms &quot;Java 
+virtual machine&quot; or &quot;JVM&quot; mean a virtual machine for the Java 
+platform.
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- Copyright Insert -->
+
+<BR CLEAR="ALL">
+
+<FORM ACTION="/cgi-bin/search.cgi" METHOD="POST">
+<TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="5">   
+  <TR>
+    <TD VALIGN="BOTTOM">
+
+
+</TD>
+</TR>
+<A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+	
+    <CENTER>
+    <FONT SIZE="-1" COLOR="#999999" FACE="Verdana, Arial, Helvetica, sans-serif">
+    [ This page was updated: <!-- new date --> 25-Feb-2000 ]
+</font></CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+  
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/products/">Products &amp; APIs</A> | 
+    <A HREF="/developer/index.html">Developer Connection</A> | 
+    <A HREF="/developer/infodocs/index.shtml">Docs &amp; Training</A> | 
+    <A HREF="/developer/support/index.html">Online Support</A><BR>
+    <A HREF="/developer/community/index.html">Community Discussion</A> |
+    <A HREF="http://java.sun.com/industry/">Industry News</A> | 
+    <A HREF="http://java.sun.com/solutions">Solutions Marketplace</A> | 
+    <A HREF="http://java.sun.com/casestudies">Case Studies</A>
+    </FONT>
+    </CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+
+  <TR>
+    <TD ALIGN="CENTER">
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/docs/glossary.html">Glossary</A> - 
+    <A HREF="http://java.sun.com/applets/">Applets</A> - 
+    <A HREF="http://java.sun.com/docs/books/tutorial/">Tutorial</A> - 
+    <A HREF="http://java.sun.com/jobs/">Employment</A> - 
+    <A HREF="http://java.sun.com/nav/business/">Business &amp; Licensing</A> - 
+    <A HREF="http://java.sun.com/javastore/">Java Store</A> -
+    <A HREF="http://java.sun.com/casestudies/">Java in the Real World</A>
+    </FONT>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <a href="/siteinfo/faq.html">FAQ</a> |
+    <a href="/feedback/index.html">Feedback</a> | 
+    <a href="http://www.dynamicdiagrams.net/mapa/cgi-bin/help.tcl?db=javasoft&dest=http://java.sun.com/">Map</a> | 
+    <A HREF="http://java.sun.com/a-z/index.html">A-Z Index</A>
+    </FONT>
+    </CENTER>
+
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD>
+
+    <TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="0">
+      <TR>
+        <TD WIDTH="50%">
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        For more information on Java technology<BR>
+        and other software from Sun Microsystems, call:<BR>
+        </FONT>
+        <FONT SIZE="-1" FACE="Verdana, Arial, Helvetica, sans-serif">
+        (800) 786-7638<BR></FONT>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Outside the U.S. and Canada, dial your country's 
+        <A HREF="http://www.att.com/business_traveler/attdirecttollfree/">AT&amp;T&nbsp;Direct&nbsp;Access&nbsp;Number</A> first.<BR>
+        </FONT>
+        </TD>
+
+        <TD ALIGN="RIGHT" WIDTH="50%">
+        <A HREF="http://www.sun.com"><IMG SRC="/images/lgsun.gif" width="64" height="30" border="0" ALT="Sun Microsystems, Inc."></A><BR>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Copyright &copy; 1995-2000
+        <A HREF="http://www.sun.com">Sun Microsystems, Inc.</A><BR>
+        All Rights Reserved. 
+        <A HREF="http://www.sun.com/share/text/termsofuse.html">Terms of Use</A>. 
+        <A HREF="http://www.sun.com/privacy/">Privacy&nbsp;Policy</A>.
+        </FONT>
+        </TD>
+      </TR>
+    </TABLE>
+	
+    </TD>
+  </TR> 
+</TABLE>
+</FORM>
+
+<!-- End Copyright Insert -->
+
+
+</BODY>
+</HTML>

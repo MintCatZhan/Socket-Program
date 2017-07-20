@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Remote Method Invocation: Introduction
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src	1.2 06/09/99  JDC">
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+
+</HEAD>
+
+<!-- Start Body Insert-->
+<BODY BGCOLOR="#ffffff">
+<!-- End Body Insert-->
+
+<!-- Start PageTop Insert -->
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <TR ALIGN="CENTER" VALIGN="TOP">
+    <TD WIDTH="157" ALIGN="LEFT">
+    <IMG SRC="/images/pixel.gif" HEIGHT="40" WIDTH="40" ALT="">
+    <A HREF="http://java.sun.com/index.html"><IMG SRC="/images/javalogo52x88.gif" WIDTH="52" HEIGHT="88" ALT="Java Technology Home Page" BORDER="0"></A>
+    <BR>
+    <IMG SRC="/images/pixel.gif" WIDTH="157" HEIGHT="1" ALT=""></TD>
+
+    <TD>
+
+    <FORM NAME="seek1" METHOD="GET" ACTION="http://search.java.sun.com/query.html">
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+      <TR>
+        <TD ALIGN="RIGHT">
+        <IMG SRC="/images/stripelt.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+        
+        <TD WIDTH="100%">
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+          <TR>
+            <TD BGCOLOR="#CC9966" WIDTH="100%">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+        </TABLE>
+        </TD>
+        
+        <TD ALIGN="LEFT">
+        <IMG SRC="/images/stripert.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+
+        <TD>
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+          <TR>
+            <TD VALIGN="CENTER">
+            <A HREF="http://java.sun.com/a-z/index.html"><IMG SRC="/images/azindex.gif" BORDER="0" WIDTH="72" HEIGHT="11" ALT="A-Z Index"></A></TD>
+              
+            <TD VALIGN="CENTER">
+            <FONT FACE="Helvetica" SIZE="1">
+            <INPUT TYPE="text" SIZE="15" MAXLENGTH="128" NAME=qt></FONT></TD>
+            
+            <TD VALIGN="CENTER">
+            <INPUT TYPE="image" SRC="/images/search.button.gif" 
+              value="search" BORDER="0" WIDTH="55" HEIGHT="14" ALT="Search"></TD>
+          </TR>
+        </TABLE>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+    <P>
+
+    <TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+      <TR VALIGN="TOP">
+        <TD WIDTH="100%"><IMG SRC="/images/chiclet.row.gif" WIDTH="55" 
+          HEIGHT="18" ALT=""></TD>
+          
+        <TD ROWSPAN="4" ALIGN="RIGHT" WIDTH="152">
+        <A HREF="/developer/index.html"><IMG SRC="/images/developer.connection.header.gif" BORDER="0" HEIGHT="42" WIDTH="319" ALT="Java Developer Connection(SM)"></A></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#FFFFFF" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#CC9966" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD><A HREF="/developer/onlineTraining/"><IMG SRC="/images/online-training.gif" ALT="Online Training" BORDER=0></A></TD>
+      </TR>
+    </TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+<!-- End PageTop Insert -->
+
+<!-- Start NavBar Insert -->
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="3" BGCOLOR="#FFFFFF" WIDTH="157" ALIGN="LEFT">
+
+<!-- tab categories -->
+
+<TR>
+<TD><A HREF="http://java.sun.com/products/"><IMG SRC="/images/side.tab.products.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Downloads, APIs, Documentation"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/index.html"><IMG SRC="/images/side.tab.developer.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Java Developer Connection"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/infodocs/index.shtml"><IMG SRC="/images/side.tab.docs.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Tutorials, Tech Articles, Training"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/support/index.html"><IMG SRC="/images/side.tab.support.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Online Support"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/community/index.html"><IMG SRC="/images/side.tab.community.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Community Discussion"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/industry/"><IMG SRC="/images/side.tab.news.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="News &amp; Events from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/solutions"><IMG SRC="/images/side.tab.solutions.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Products from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/casestudies"><IMG SRC="/images/side.tab.case.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="How Java Technology is Used Worldwide"></A></TD>
+</TR>
+<TR>
+<TD>    <DIV ALIGN="RIGHT">
+    <A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+    </DIV>
+</TD>
+</TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+
+<!-- End NavBar Insert -->
+
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2>Fundamentals of RMI<BR>
+      <FONT SIZE="4">About this Short Course</FONT></H2>
+  <H3><EM>By 
+  <A HREF="http://www.jguru.com"><img src="images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H3>
+  <FONT SIZE="-1">
+ [<A HREF="RMI.html">Short Course</A>|
+  <A HREF="exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+
+<P>The Java Developer Connection<FONT SIZE="-2"><SUP>SM</SUP></FONT> (JDC) presents a Short Course introducing the Remote Method Invocation API, written by Java<FONT SIZE="-2"><SUP>TM</SUP></FONT> Software licensee, jGuru (formerly named the MageLang Institute). A leading provider of Java technology training, jGuru has contributed regularly to the JDC since 1996.
+
+<P>jGuru has been dedicated to promoting the growth of the Java technology community through evangelism, education, and software since 1995. You can find out more about their activities, including community-driven FAQs and online learning, at <A HREF="http://www.jguru.com">jGuru.com</A>.
+
+<P>Reach out and touch someone. Object-oriented distributed computing is
+all about communication between objects that live in different virtual
+machines.  Remote Method Invocation (RMI) makes sending a message to an
+object in Timbuktu as easy as invoking a method on a local object. RMI
+is 100% Pure Java <FONT SIZE="-2"><SUP>TM</SUP></FONT>. And best of all, it's built into the core Java libraries 
+(version 1.1 and higher). This module introduces RMI and covers its strengths and
+weaknesses as a platform for distributed computing.<BR>
+<H3>Objectives</H3>
+<P>
+After completing this module you will understand:
+
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">What distributed computing adds to the Java platform</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">The RMI architecture</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">The distributed object model defined and supported by RMI</FONT>
+</ul><BR>
+<P>By the end of this module you will be able to:<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Send objects between JVMs with object serialization</FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Provide new options for program code installation and distribution.</FONT>
+</UL>
+<P><font size="4"><strong>Prerequisites</strong></font>
+
+<P>A general familiarity with object-oriented programming concepts and the Java programming language. If you are not familiar with these capabilities, see the <A HREF="http://java.sun.com/docs/books/tutorial/">Java Tutorial</A>. The exercises require the ability to modify and build Java programs.
+
+<H4>About the Author</H4>
+
+<P><em><strong>Govind Seshadri</strong> is a Java evangelist and frequent speaker on advanced Java development issues at Java/Object conferences worldwide. His expertise spans server-side Java, distributed object computing, and application servers. Before joining jGuru, he was Senior Technical Architect with the Chicago-based object consultancy, Strategic Technology Resources. Govind has played diverse roles during his technical career: architect, mentor, developer and project leader.</em>
+
+
+<H4><A HREF="RMI.html">Start the Short Course</A></H4>
+<H4><A HREF="exercises.html">Exercises</A></H4>
+
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font>
+<P>
+<H3>Reader Survey</H3>
+Tell us what you think of this tutorial. 
+<P>
+<IMG SRC="/images/T7.gif" ALIGN="LEFT" ALT="[Duke]">
+
+<FORM METHOD="POST" ACTION="/servlet/jdc.survey.TabulationServlet">
+<INPUT TYPE="hidden" NAME="survey_id" VALUE="2600"> 
+<INPUT TYPE="hidden" NAME="anonymous" VALUE="True">
+<INPUT TYPE="hidden" NAME="answer_count" VALUE="3">
+<INPUT TYPE="hidden" NAME="answer1" VALUE="rmitutorial">
+<INPUT NAME="answer2" TYPE="RADIO" VALUE="2"> Very worth reading
+<INPUT NAME="answer2" TYPE="RADIO" VALUE="1"> Worth reading
+<INPUT NAME="answer2" TYPE="RADIO" VALUE="0"> Not worth reading
+
+<P>
+If you have other comments or ideas for future tutorials, please 
+type them here:
+
+<P>
+<TEXTAREA NAME="answer3" ROWS="5" COLS="50"></TEXTAREA>
+
+<P>
+<INPUT TYPE="SUBMIT" VALUE="Submit">
+<INPUT TYPE="RESET">
+</FORM>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- Copyright Insert -->
+
+<BR CLEAR="ALL">
+
+<FORM ACTION="/cgi-bin/search.cgi" METHOD="POST">
+<TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="5">   
+  <TR>
+    <TD VALIGN="BOTTOM">
+
+
+</TD>
+</TR>
+<A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+	
+    <CENTER>
+    <FONT SIZE="-1" COLOR="#999999" FACE="Verdana, Arial, Helvetica, sans-serif">
+    [ This page was updated: <!-- new date --> 25-Feb-2000 ]
+</font></CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+  
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/products/">Products &amp; APIs</A> | 
+    <A HREF="/developer/index.html">Developer Connection</A> | 
+    <A HREF="/developer/infodocs/index.shtml">Docs &amp; Training</A> | 
+    <A HREF="/developer/support/index.html">Online Support</A><BR>
+    <A HREF="/developer/community/index.html">Community Discussion</A> |
+    <A HREF="http://java.sun.com/industry/">Industry News</A> | 
+    <A HREF="http://java.sun.com/solutions">Solutions Marketplace</A> | 
+    <A HREF="http://java.sun.com/casestudies">Case Studies</A>
+    </FONT>
+    </CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+
+  <TR>
+    <TD ALIGN="CENTER">
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/docs/glossary.html">Glossary</A> - 
+    <A HREF="http://java.sun.com/applets/">Applets</A> - 
+    <A HREF="http://java.sun.com/docs/books/tutorial/">Tutorial</A> - 
+    <A HREF="http://java.sun.com/jobs/">Employment</A> - 
+    <A HREF="http://java.sun.com/nav/business/">Business &amp; Licensing</A> - 
+    <A HREF="http://java.sun.com/javastore/">Java Store</A> -
+    <A HREF="http://java.sun.com/casestudies/">Java in the Real World</A>
+    </FONT>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <a href="/siteinfo/faq.html">FAQ</a> |
+    <a href="/feedback/index.html">Feedback</a> | 
+    <a href="http://www.dynamicdiagrams.net/mapa/cgi-bin/help.tcl?db=javasoft&dest=http://java.sun.com/">Map</a> | 
+    <A HREF="http://java.sun.com/a-z/index.html">A-Z Index</A>
+    </FONT>
+    </CENTER>
+
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD>
+
+    <TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="0">
+      <TR>
+        <TD WIDTH="50%">
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        For more information on Java technology<BR>
+        and other software from Sun Microsystems, call:<BR>
+        </FONT>
+        <FONT SIZE="-1" FACE="Verdana, Arial, Helvetica, sans-serif">
+        (800) 786-7638<BR></FONT>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Outside the U.S. and Canada, dial your country's 
+        <A HREF="http://www.att.com/business_traveler/attdirecttollfree/">AT&amp;T&nbsp;Direct&nbsp;Access&nbsp;Number</A> first.<BR>
+        </FONT>
+        </TD>
+
+        <TD ALIGN="RIGHT" WIDTH="50%">
+        <A HREF="http://www.sun.com"><IMG SRC="/images/lgsun.gif" width="64" height="30" border="0" ALT="Sun Microsystems, Inc."></A><BR>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Copyright &copy; 1995-2000
+        <A HREF="http://www.sun.com">Sun Microsystems, Inc.</A><BR>
+        All Rights Reserved. 
+        <A HREF="http://www.sun.com/share/text/termsofuse.html">Terms of Use</A>. 
+        <A HREF="http://www.sun.com/privacy/">Privacy&nbsp;Policy</A>.
+        </FONT>
+        </TD>
+      </TR>
+    </TABLE>
+	
+    </TD>
+  </TR> 
+</TABLE>
+</FORM>
+
+<!-- End Copyright Insert -->
+
+
+</BODY>
+</HTML>

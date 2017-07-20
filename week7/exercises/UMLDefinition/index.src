@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: UML Definition of RMI Example System
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> UML Definition of RMI Example System</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jGuru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="help.html">Help</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+<P>
+This exercise intoduces you to defining RMI remote services via Java interfaces. You will 
+use the simple banking system defined by the following UML diagrams:</p>
+
+<p align="center">
+    <img  src="../../images/UMLBankingSystem_BankManager_01.gif" alt="[UML Banking System: BankManager Defintion]" height="91" width="295"/>
+
+
+<p align="center">
+    <img  src="../../images/UMLBankingSystem_Client_01.gif" alt="[UML Banking System: Client Defintion]" height="91" width="222"/>
+
+
+<p align="center">
+    <img  src="../../images/UMLBankingSystem_Account_01.gif" alt="[UML Banking System: Account Defintion]" height="113" width="202"/>
+
+
+<H3>Skeleton Code</H3>
+<UL><CODE>
+<A HREF="Account.java">Account.java</A><BR>
+<A HREF="BankManager.java">BankManager.java</A><BR>
+<A HREF="Client.java">Client.java</A></CODE>
+</UL>
+<P>
+<H3>Tasks</H3>
+<BR>
+<OL>
+<A HREF="help.html#1"><LI></A>
+<P>
+
+<P>
+Observe the UML Diagram for the banking system
+<p>
+
+<A HREF="help.html#2"><LI></A>
+<P>
+
+<P>
+Complete the code to define the interfaces in this system
+
+</OL>
+
+<P>
+Where help exists, the task numbers above are linked to the
+step-by-step <A HREF="help.html">help</A> page.
+
+<P>
+When you finish this exercise, you will have written
+the Java interface definitions for three RMI remote services.
+
+<H3>Solution Source</H3>
+<UL><CODE>
+<A HREF=solution/Account.java>Account.java</A><BR>
+<A HREF=solution/BankManager.java>BankManager.java</A><BR>
+<A HREF=solution/Client.java>Client.java</A><BR></CODE>
+</UL>
+<H3>Demonstration</H3>
+
+<P>There is no behavior, yet. This exercise involves writing source code only.</p></P>
+
+<H4><A HREF="../SimpleBankingSystem/index.html">Next Magercise</A></H4>
+<H4><A HREF="../../exercises.html">Exercises</A></H4>
+<H4><A HREF="../../RMI.html">Short Course</A></H4>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

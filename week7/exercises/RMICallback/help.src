@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Help: RMI Client Callbacks
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> RMI Client Callbacks</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jguru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="index.html">Exercise</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+Help is available for each task.
+<P>
+<BR><BR>
+<OL>
+<A NAME="1"><H3>Task 1</H3></A>
+
+<P>
+
+Define and compile the <CODE>TimeMonitor</CODE> interface.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+Create the interface <CODE>TimeMonitor</CODE>, which has one method.
+
+The method is called <CODE>tellMeTheTime</CODE>.
+
+It accepts one parameter of type <CODE>Date</CODE> and returns <CODE>void</CODE>.
+
+
+<P>
+Remember that remote interfaces must extend <CODE>java.rmi.Remote</CODE>
+and the all remote methods can throw
+<CODE>java.rmi.RemoteException</CODE>.
+
+<P>
+Compile the file with the command:
+<p>
+
+<CODE>javac TimeMonitor.java</CODE>
+<A NAME="2"><H3>Task 2</H3></A>
+
+<P>
+
+Define and compile the <CODE>TimeServer</CODE> interface.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+Create the interface <CODE>TimeServer</CODE>, which has one method.
+The method is called <CODE>registerTimeMonitor</CODE>.
+It accepts one parameter of type <CODE>TimeMonitor</CODE> and returns <CODE>void</CODE>.
+</p>
+
+<P>
+Remember that remote interfaces must extend <CODE>java.rmi.Remote</CODE>
+and the all remote methods can throw
+<CODE>java.rmi.RemoteException</CODE>.
+</p>
+
+<P>
+Compile the file with the command:
+<p>
+<CODE>javac TimerServer.java</CODE>
+
+<A NAME="3"><H3>Task 3</H3></A>
+
+<P>
+
+Complete the implementation for the method <CODE>registerTimeMonitor</CODE> in <CODE>RMIServer</CODE>.
+
+<p>
+<HR WIDTH="80%">
+
+<P>
+The class <CODE>RMIServer</CODE> implements the <CODE>TimeServer</CODE> interface.
+You will need to complete the implementation of <CODE>registerTimeMonitor</CODE> in
+<CODE>RMIServer</CODE>.
+Refer to the comments in the code file for guidance.
+<p>
+<A NAME="4"><H3>Task 4</H3></A>
+
+<P>
+
+Complete the definition of the class <CODE>TimeTicker</CODE>.
+
+
+<HR WIDTH="80%">
+
+<P>
+The class <CODE>TimeTicker</CODE> is defined inside the file
+for <CODE>RMIServer</CODE>.
+You will need to complete the implementation of this class by
+adding a call to the <CODE>tellMeTheTime</CODE> method of the <CODE>TimeMonitor</CODE>
+interface.
+This is the call that performs the callback to the Applet.
+</p>
+<A NAME="5"><H3>Task 5</H3></A>
+
+<P>
+
+Compile the server, RMIServer and create the <CODE>stub</CODE> and <CODE>skeleton</CODE> files.
+
+</p>
+<HR WIDTH="80%">
+
+<P>
+Use the <CODE>javac</CODE> utility to compile the <CODE>RMIServer</CODE> file.
+</p>
+
+<pre>javac RMIServer</pre>
+
+<P>
+Use the <CODE>rmic</CODE> utility with <CODE>RMIServer</CODE>.
+</p>
+
+<pre>rmic RMIServer</pre>
+
+<P>
+Notice that <CODE>RMIServer</CODE> implements the exported service.
+Because <CODE>RMIServer</CODE> extends <CODE>RMIServer</CODE> it cannot also extend
+<CODE>UnicastRemoteObject</CODE>.
+Instead, <CODE>RMIServer</CODE> must make an explicit call
+to <CODE>UnicastRemoteObject.exportObject</CODE>
+before it can register itself with the Registry.
+This call is normally made automatically in the constructor of <CODE>UnicastRemoteObject</CODE>.
+</p>
+<A NAME="6"><H3>Task 6</H3></A>
+
+<P>
+
+Prepare the Applet for execution.
+
+</p>
+<HR WIDTH="80%">
+
+<P>
+The Applet code has been completed for you.
+You should examine it to see how it implements the <CODE>TimeMonitor</CODE>
+interface and prepares itself for use by RMI with a call
+to <CODE>UnicastRemoteObject.exportObject</CODE>.
+</p>
+
+<P>
+First you must compile it with the following command:
+</p>
+
+<pre>javac Applet1.java</pre>
+
+<P>
+Next, create the <CODE>stub</CODE> and <CODE>skeleton</CODE> files
+with the <CODE>rmic</CODE> utility:
+
+
+<pre>rmic Applet1</pre>
+<A NAME="7"><H3>Task 7</H3></A>
+
+<P>
+
+Start the RMI Server in its own DOS console. 
+
+
+<HR WIDTH="80%">
+
+<P>
+Run the class <CODE>RMIServer</CODE> with the <CODE>java</CODE> utility.
+</p>
+
+<pre>java RMIServer</pre>
+<A NAME="8"><H3>Task 8</H3></A>
+
+<P>
+
+Start the Applet with the <CODE>appletviewer</CODE>.
+
+</p>
+<HR WIDTH="80%">
+
+<P>
+Use the program <CODE>appletviewer</CODE> and execute the
+<CODE>Applet.html</CODE> file.
+This HTML file contains the commands to run Applet1.class.
+</p>
+
+<pre>appletviewer Applet.html</pre>
+</OL>
+</P>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

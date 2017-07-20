@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Serializing Remote Objects: Client
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="RMI">
+  <META NAME="KEYWORDS" CONTENT="RMI">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src 1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- BODY-TEMPLATE -->
+<!-- PAGETOP-TEMPLATE -->
+<!-- NAVBAR-TEMPLATE -->
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+
+<DIV ALIGN="RIGHT">
+  <H2> Serializing Remote Objects: Client</H2><BR>
+  <FONT SIZE="-1">
+ <H4><EM>by <A HREF="http://www.jGuru.com" TARGET="_blank"><img src="../../images/jguru-xxxsm.gif" width=66 height=20 border="0" alt="jGuru"></A></EM></H4>
+ [<A HREF="help.html">Help</A> | 
+  <A HREF="http://java.sun.com/products/jdk/1.2/docs/api">API Docs</A> |
+  <A HREF="../../RMI.html">Short Course</A>|
+  <A HREF="../../exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+
+<P>
+<P>
+In this exercise you will run the Client side of the Remote Object Serialization
+project.
+
+All of the files have been created for you.
+<P>
+In this exercise you will see how to use the Delegation Pattern to
+allow a service to migrate.
+This is covered
+in the <A HREF="../../RMI.html#SerializingRemoteObjects">Serializing Remote Objects</A> 
+section of the course notes.
+</P>
+<H3>Skeleton Code</H3>
+<UL>
+<LI><A HREF="LocalRemoteClient.java">LocalRemoteClient.java</A>
+</UL>
+<P>
+<H3>Tasks</H3>
+<BR>
+<OL>
+<A HREF="help.html#1"><LI></A>
+<P>
+
+<P>
+
+Move Stub files from the Server subdirectory.
+
+
+<p>
+<A HREF="help.html#2"><LI></A>
+<P>
+
+<P>
+
+Compile all of the class files for the client.
+
+
+<p>
+<A HREF="help.html#3"><LI></A>
+<P>
+
+
+
+Run the RMI client program.
+
+
+
+</OL>
+
+<P>
+Where help exists, the task numbers above are linked to the
+step-by-step <A HREF="help.html">help</A> page.
+
+<H3>Solution Source</H3>
+<P>
+
+
+<UL>
+<LI><A HREF=solution/LocalRemoteClient.java>LocalRemoteClient.java</A></li>
+</UL>
+<H3>Demonstration</H3>
+<P>
+
+When the client is run in its DOS console, the output will be:
+<pre>
+RemoteModelManager lookup successful
+Remote version: Version 1.0
+Local Version of the model loaded
+LocalModel...Returning: Version 1.0
+Local  version: Version 1.0
+</pre>
+
+
+<H4><A HREF="../../exercises.html">Exercises</A></H4>
+<H4><A HREF="../../RMI.html">Short Course</A></H4>
+
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font></p>
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- COPYRIGHT-TEMPLATE -->
+
+</BODY>
+</HTML>

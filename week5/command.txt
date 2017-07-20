@@ -1,0 +1,9 @@
+
+
+java -Djavax.net.ssl.keyStore=testStore -Djavax.net.ssl.keyStorePassword=123456 TLSEchoServer
+java -Djavax.net.ssl.trustStore=mytruststore -Djavax.net.ssl.trustStorePassword=123456 TLSEchoClient localhost
+
+OR
+
+java -Djavax.net.ssl.keyStore=testStore -Djavax.net.ssl.keyStorePassword=123456 -cp . TLSEchoServer
+java -Djavax.net.ssl.trustStore=mytruststore -Djavax.net.ssl.trustStorePassword=123456 -cp . TLSEchoClient localhost

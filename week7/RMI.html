@@ -1,0 +1,2208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HEAD>
+<TITLE>
+jGuru: Remote Method Invocation (RMI)
+</TITLE>
+  <META NAME="AUTHOR" CONTENT="jGuru.com">
+  <META NAME="DESCRIPTION" CONTENT="Description Goes Here">
+  <META NAME="KEYWORDS" CONTENT="Keyword Listing Goes Here">
+  <META NAME="OWNER" CONTENT="Editorial/JDC">
+  <META NAME="revision" CONTENT="@(#)index2.src	1.2 06/09/99  JDC">
+  
+  <STYLE TYPE="text/css">
+    <!-- 
+    CODE {font-family: Courier, Monospace;
+          font-size: 12pt}
+    PRE {font-family: Courier, Monospace;
+         font-size: 11pt}
+      -->
+  </STYLE>
+</HEAD>
+
+<!-- Start Body Insert-->
+<BODY BGCOLOR="#ffffff">
+<!-- End Body Insert-->
+
+<!-- Start PageTop Insert -->
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <TR ALIGN="CENTER" VALIGN="TOP">
+    <TD WIDTH="157" ALIGN="LEFT">
+    <IMG SRC="/images/pixel.gif" HEIGHT="40" WIDTH="40" ALT="">
+    <A HREF="http://java.sun.com/index.html"><IMG SRC="/images/javalogo52x88.gif" WIDTH="52" HEIGHT="88" ALT="Java Technology Home Page" BORDER="0"></A>
+    <BR>
+    <IMG SRC="/images/pixel.gif" WIDTH="157" HEIGHT="1" ALT=""></TD>
+
+    <TD>
+
+    <FORM NAME="seek1" METHOD="GET" ACTION="http://search.java.sun.com/query.html">
+    <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+      <TR>
+        <TD ALIGN="RIGHT">
+        <IMG SRC="/images/stripelt.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+        
+        <TD WIDTH="100%">
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+          <TR>
+            <TD BGCOLOR="#CC9966" WIDTH="100%">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD>
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+          
+          <TR>
+            <TD BGCOLOR="#CC9966">
+            <IMG SRC="/images/pixel.gif" HEIGHT="2" WIDTH="1" ALT=""></TD>
+          </TR>
+        </TABLE>
+        </TD>
+        
+        <TD ALIGN="LEFT">
+        <IMG SRC="/images/stripert.gif" WIDTH="6" HEIGHT="14" ALT=""></TD>
+
+        <TD>
+        
+        <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+          <TR>
+            <TD VALIGN="CENTER">
+            <A HREF="http://java.sun.com/a-z/index.html"><IMG SRC="/images/azindex.gif" BORDER="0" WIDTH="72" HEIGHT="11" ALT="A-Z Index"></A></TD>
+              
+            <TD VALIGN="CENTER">
+            <FONT FACE="Helvetica" SIZE="1">
+            <INPUT TYPE="text" SIZE="15" MAXLENGTH="128" NAME=qt></FONT></TD>
+            
+            <TD VALIGN="CENTER">
+            <INPUT TYPE="image" SRC="/images/search.button.gif" 
+              value="search" BORDER="0" WIDTH="55" HEIGHT="14" ALT="Search"></TD>
+          </TR>
+        </TABLE>
+        </TD>
+      </TR>
+    </TABLE>
+    </FORM>
+    <P>
+
+    <TABLE BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+      <TR VALIGN="TOP">
+        <TD WIDTH="100%"><IMG SRC="/images/chiclet.row.gif" WIDTH="55" 
+          HEIGHT="18" ALT=""></TD>
+          
+        <TD ROWSPAN="4" ALIGN="RIGHT" WIDTH="152">
+        <A HREF="/developer/index.html"><IMG SRC="/images/developer.connection.header.gif" BORDER="0" HEIGHT="42" WIDTH="319" ALT="Java Developer Connection(SM)"></A></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#FFFFFF" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD BGCOLOR="#CC9966" HEIGHT="1" WIDTH="100%">
+        <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+      </TR>
+      
+      <TR VALIGN="TOP">
+        <TD><A HREF="/developer/onlineTraining/"><IMG SRC="/images/online-training.gif" ALT="Online Training" BORDER=0></A></TD>
+      </TR>
+    </TABLE>
+
+    </TD>
+  </TR>
+</TABLE>
+
+
+<!-- End PageTop Insert -->
+
+<!-- Start NavBar Insert -->
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="3" BGCOLOR="#FFFFFF" WIDTH="157" ALIGN="LEFT">
+
+<!-- tab categories -->
+
+<TR>
+<TD><A HREF="http://java.sun.com/products/"><IMG SRC="/images/side.tab.products.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Downloads, APIs, Documentation"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/index.html"><IMG SRC="/images/side.tab.developer.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Java Developer Connection"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/infodocs/index.shtml"><IMG SRC="/images/side.tab.docs.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Tutorials, Tech Articles, Training"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/support/index.html"><IMG SRC="/images/side.tab.support.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Online Support"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="/developer/community/index.html"><IMG SRC="/images/side.tab.community.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Community Discussion"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/industry/"><IMG SRC="/images/side.tab.news.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="News &amp; Events from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/solutions"><IMG SRC="/images/side.tab.solutions.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="Products from Everywhere"></A></TD>
+</TR>
+
+<TR>
+<TD><A HREF="http://java.sun.com/casestudies"><IMG SRC="/images/side.tab.case.gif" HEIGHT="15" WIDTH="130" BORDER="0" ALT="How Java Technology is Used Worldwide"></A></TD>
+</TR>
+<TR>
+<TD>    <DIV ALIGN="RIGHT">
+    <A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+    </DIV>
+</TD>
+</TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+
+<!-- End NavBar Insert -->
+
+
+<!-- START SUB-NAV -->
+
+<TR>
+  <TD><!-- INSERT SUB-NAV INFO -->
+  </TD>
+</TR>
+
+
+<!-- END SUB-NAV -->
+
+</TABLE>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD>
+<FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+<!-- Template Version 2.0 -->
+
+<!-- ================== -->
+<!-- Start Main Content -->
+<!-- ================== -->
+<A NAME="top"></A>
+<DIV ALIGN="RIGHT">
+  <H2><FONT SIZE="4">Fundamentals of RMI</FONT><BR>
+      Short Course</H2>
+  <H3><EM>By 
+  <A HREF="http://www.jguru.com"><img src="images/jguru-xxxsm.gif" width=66 
+height=20 border="0" alt="jGuru"></A></EM></H3>
+  <FONT SIZE="-1">
+ [<A HREF="index.html">About This Course</A>|
+  <A HREF="exercises.html">Exercises</A>]
+  </FONT>
+  </DIV>
+
+<P>This short course covers the fundamentals of the Remote Method Invocation 
+(RMI) technology, as found in the Java 2&#153; platform.
+
+<h4>Course Outline</h4>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#IntroRMI">Introduction to Distributed Computing with RMI</A>
+</FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIArchitectureGoals">Goals</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#Comparison">Comparison of Distributed and Nondistributed Java 
+Programs</A></FONT>
+</ul>
+</ul>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#JavaRMIArchitecture">Java RMI Architecture</A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIInterfaces">Interfaces:  The Heart of RMI</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIArchitectureLayers">RMI Architecture Layers</A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIStubAndSkeletonLayer">Stub and Skeleton Layer</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIArchitectureRemoteReferenceLayer">Remote Reference Layer</A>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIArchitectureTransportLayer">Transport Layer</A></FONT>
+</ul>
+</ul>
+</ul>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#NamingRemoteObjects">Naming Remote Objects</A></FONT>
+</ul>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#UsingRMI">Using RMI</A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIInterfaces2">Interfaces</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIImplementations">Implementation</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIStubsAndSkeletons">Stubs and Skeletons</A>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIHostingServer">Host Server</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIClient">Client</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RunningAnRMISystem">Running the RMI System</A></FONT>
+</ul>
+</ul>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#ParametersInRMI">Parameters in RMI</A>
+</ul>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#SingleJVM">Parameters in a Single Java<FONT 
+SIZE="-2"><SUP>TM</SUP></FONT> Virtual Machine<A 
+HREF="#TJVM"><SUP>1</SUP></A></A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#PrimitiveParameters">Primitive Parameters</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#ObjectParameters">Object Parameters</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RemoteObjectParameters">Remote Object Parameters</A></FONT>
+</UL>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMIClientSideCallbacks">RMI Client-Side Callbacks</A></FONT>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#RMISoftwareInstallation">Distributing and Installing RMI 
+Software</A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#DistributingRMIClasses">Distributing RMI Classes</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#ClassDistribution">Automatic Distribution of Classes</A></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#FirewallIssues">Firewall Issues</A></FONT>
+</UL>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#DistributedGarbageCollection">Distributed Garbage 
+Collection</A></FONT>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#SerializingRemoteObjects">Serializing Remote Objects</A></FONT>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#MobileAgentArchitectures">Mobile Agent Architectures</A></FONT>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#AlternateImplementations">Alternate Implementations</A></FONT>
+</UL>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#AdditionalResources">Additional Resources</A></FONT>
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="RMI.html#BooksAndArticles">Books and Articles</A></FONT>
+</UL>
+</UL>
+
+
+
+
+<H3><A NAME="IntroRMI">Introduction to Distributed Computing with RMI</A></H3>
+<P>
+Remote Method Invocation (RMI) technology, first 
+introduced in JDK<FONT SIZE="-2"><SUP>TM</SUP></FONT> 1.1, elevates network 
+programming to 
+a higher plane. Although RMI is relatively easy to use, it is 
+a remarkably powerful technology and exposes the average Java developer 
+to an entirely new paradigm--the world of distributed object computing. 
+<P>
+This course provides you with an in-depth introduction to this 
+versatile technology. RMI has evolved considerably since JDK 1.1,
+and has been significantly upgraded under the Java 2 SDK. Where
+applicable, the differences between the two releases will be
+indicated.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H4><A NAME="RMIArchitectureGoals">Goals</A></H4>
+<P>
+A primary goal for the RMI designers was to allow programmers 
+to develop distributed Java programs with the same syntax and 
+semantics used for non-distributed programs. To do this, they 
+had to carefully map how Java classes and objects work in a 
+single Java<FONT SIZE="-2"><SUP>TM</SUP></FONT> Virtual Machine<A 
+HREF="#TJVM"><SUP>1</SUP></A> (JVM)</FONT> to a new model of how 
+classes and objects would work in a distributed (multiple JVM) 
+computing environment. 
+<P>
+This section introduces the RMI architecture 
+from the perspective of the distributed or remote Java objects, 
+and explores their differences through the behavior of local Java objects. 
+The RMI architecture defines how objects behave, how and when exceptions can 
+occur, how 
+memory is managed, and how parameters are passed to, and 
+returned from, remote methods.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A> 
+<H4><A NAME="Comparison">Comparison of Distributed and Nondistributed Java 
+Programs</A></H4>
+<P>The RMI architects tried to make the use of distributed Java objects similar 
+to using local Java objects.  While they succeeded, some important differences 
+are listed in the table below.<P>Do not worry if you do not understand all of 
+the difference.  They will become clear as you explore the RMI architecture.  
+You can use this table as a reference as you learn about RMI.<table 
+cellpadding="2" valign="TOP" width="100%" cellspacing="1" border="1">
+<tr>
+  <td width="20%" valign="TOP"></td>
+  <td width="30%" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">Local Object</FONT></td>
+  <td width="50%" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">Remote Object</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">Object Definition</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A local object is defined by a Java class.</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A remote object's exported behavior is defined by an interface that 
+must extend the <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">Remote
+</A></CODE> interface.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Object 
+Implementation</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">A local object is 
+implemented by its Java class.</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">A remote object's behavior 
+is executed by a Java class that implements the remote interface.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">Object Creation</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A new instance of a local object is created by the <CODE>new</CODE> 
+operator.</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A new instance of a remote object is created on the host computer 
+with the <CODE>new</CODE> operator.  A client cannot directly create a new 
+remote object (unless using Java 2 Remote Object Activation).</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">Object Access</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A local object is accessed directly via an object reference 
+variable.</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">A remote object is accessed via an object reference variable which 
+points to a proxy stub implementation of the remote interface.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">References</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">In a single JVM, an object 
+reference points directly at an object in the heap.</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">A "remote reference" is a 
+pointer to a proxy object (a &quot;stub&quot;) in the local heap. That stub 
+contains information that allows it to connect to a remote object, which  
+contains the implementation of the methods.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Active 
+References</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">In a single JVM, an object is considered "alive" if there is at 
+least one reference to it.</FONT></td>
+  <td align="LEFT" valign="TOP"><FONT FACE="Verdana, Arial, Helvetica, 
+sans-serif">In a distributed environment, remote JVMs may crash, and network 
+connections may be lost.  A remote object is considered to have an active remote 
+reference to it if it has been accessed within a certain time period (the lease 
+period).  If all remote references have been explicitly dropped, or if all 
+remote references have expired leases, then a remote object is available for 
+distributed garbage collection.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Finalization</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">If an object implements the 
+<A 
+HREF="http://www.javasoft.com/docs/books/jls/html/12.doc.html#44748"><CODE>final
+ize()</CODE></A> method, it is called before an object is reclaimed by the 
+garbage collector.</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">If a remote object 
+implements the <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/Unreferenced
+.html">Unreferenced</A></CODE> interface, the unreferenced method of that 
+interface is called when all remote references have been dropped.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Garbage 
+Collection</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">When all local references 
+to an object have been dropped, an object becomes a candidate for garbage 
+collection.</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">The distributed garbage 
+collector works with the local garbage collector.  If there are no remote 
+references and all local references to a remote object have been dropped, then 
+it becomes a candidate for garbage collection through the normal 
+means.</FONT></td>
+</tr>
+<tr>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Exceptions</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">Exceptions are either 
+Runtime exceptions or Exceptions. The Java compiler forces a program to handle 
+all Exceptions.</FONT></td>
+  <td align="LEFT" valign="TOP">
+  <FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+  RMI forces programs to deal with any possible <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/RemoteException.htm
+l">RemoteException</A></CODE> objects that may be thrown. 
+  This was done to ensure the robustness of distributed 
+applications.</FONT></td>
+</tr>
+</table>
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H3><A NAME="JavaRMIArchitecture">Java RMI Architecture</A></H3>
+<P>
+
+<P>The design goal for the RMI architecture was to create a Java distributed 
+object model that integrates naturally into the Java programming language and 
+the local object model. RMI architects have succeeded; creating a system that 
+extends the safety and robustness of the Java architecture to the distributed 
+computing world.<H4><A NAME="RMIInterfaces">Interfaces:  The Heart of 
+RMI</A></H4>
+<P>
+
+
+
+<P>
+The RMI architecture is based on one important principle: the 
+definition of behavior 
+and the implementation of that behavior are separate concepts.
+RMI allows the code that defines the behavior and the code that
+implements the behavior to remain separate and to run
+on separate JVMs.
+<P>
+This fits nicely with the needs of a distributed system where clients
+are concerned about the definition of a service and servers 
+are focused on providing the service.
+<P>
+Specifically, in RMI, the definition of a remote service
+is coded using a Java interface.The implementation of the remote service is 
+coded in a class.Therefore, the key to understanding RMI is to
+remember that <em>interfaces define behavior</em> and 
+<em>classes define implementation</em>.  
+
+<P>
+While the following diagram illustrates this separation,
+<P>
+    <img  src="images/RMIArchitectureLayers_01.gif" alt="[RMI Architecture 
+Layers]" height="139" width="408"/>
+
+<P>
+remember that a Java interface does not contain executable code. RMI supports 
+two classes that implement the same interface. The first class is the 
+implementation of the behavior,and it runs on the server. The second class acts 
+as a proxy 
+for the remote service and it runs on the client.This is shown in the following 
+diagram.
+<P>
+    <img  src="images/RMIInterfaces.gif" alt="[RMI Interfaces]" height="194" 
+width="409"/>
+
+<P>
+
+A client program makes method calls on theproxy object, RMI sends the request 
+to the remote JVM, and forwards it to the implementation.Any return values 
+provided by the implementation are sent backto the proxy and then to the 
+client's program.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H4><A NAME="RMIArchitectureLayers">RMI Architecture Layers</A></H4>
+<P>
+With an understanding of the high-level RMI architecture, 
+take a look under the covers to see its  implementation. 
+<P>
+The RMI implementation is essentially built from three abstraction
+layers.The first is the Stub and Skeleton layer, which lies just beneath
+the view of the developer.This layer intercepts method calls made by the client 
+to theinterface reference variable and redirects these
+calls to a remote RMI service. 
+<P>
+The next layer is the Remote Reference Layer. This layer understands how to 
+interpret and managereferences made from clients to the remote service objects.
+In JDK 1.1, this layer connects clients to remote service
+objects that are running and exported on a server.
+
+The connection is a one-to-one (unicast) link.
+
+In the Java 2 SDK, this layer was enhanced to support the activation of
+dormant remote service objects via <em>Remote Object Activation</em>.
+
+
+
+<P>
+The transport layer is based on TCP/IP connections between
+machines in a network.
+
+It provides basic connectivity, as well as some firewall penetration
+strategies.
+<P>
+    <img src="images/RMIArchitectureLayers.gif" alt="[RMI Architecture Layers]" 
+height="129" width="403"/>
+
+<P>
+By using a layered architecture each of the layers could be enhanced 
+or replaced without affecting the rest of the system.
+
+For example, the transport layer could be replaced by a UDP/IP
+layer without affecting the upper layers.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H5><A NAME="RMIStubAndSkeletonLayer">Stub and Skeleton Layer</A></H5>
+<P>
+The stub and skeleton layer of RMI lie just beneath the view
+of the Java developer. 
+
+In this layer, RMI uses the Proxy design pattern as described in the book, <A 
+HREF="RMI.html#BooksAndArticles"><I>Design Patterns</I></A> by Gamma, Helm, 
+Johnson and Vlissides.
+
+In the Proxy pattern, an object in one context
+is represented by another (the proxy) in a separate context.
+
+The proxy knows how to forward method calls between the participating
+objects.
+
+The following class diagram illustrates the Proxy pattern.
+<P>
+    <img  src="images/RMIProxyPattern.gif" alt="[Proxy Pattern]" height="213" 
+width="384"/>
+
+<P>
+In RMI's use of the Proxy pattern, 
+the stub class plays the role of the proxy, and the
+remote service implementation class 
+plays the role of the <CODE>RealSubject</CODE>. 
+<P>
+A skeleton is a helper class that is 
+<A HREF="RMI.html#UsingRMI">generated</A>
+for RMI to use.
+
+The skeleton understands how to communicate
+with the stub across the RMI link. The skeleton carries on a conversation with 
+the stub; it readsthe parameters for the method call from the link, makes
+the  call to the remote service implementation object,
+accepts the return value, and then writes the return
+value back to the stub.
+
+<P>
+In the Java 2 SDK implementation of RMI, the new
+wire protocol has made skeleton classes
+obsolete.RMI uses reflection to make the connection to
+the remote service object.You only have to worry about skeleton classes and 
+objects inJDK 1.1 and JDK 1.1 compatible system implementations.
+<H5><A NAME="RMIArchitectureRemoteReferenceLayer">Remote Reference 
+Layer</A></H5>
+<P>
+The Remote Reference Layers defines and supports
+the invocation semantics of the RMIconnection.This layer provides a 
+<CODE>RemoteRef</CODE>object that represents the link to the remote
+service implementation object.
+<P>
+The stub objects use the <CODE>invoke()</CODE>
+method in <CODE>RemoteRef</CODE>
+to  forward the method call.
+
+The <CODE>RemoteRef</CODE> object understands the
+invocation semantics for remote services.
+<P>
+The JDK 1.1 implementation of RMI provides only
+one way for clients to connect to
+remote service implementations:
+a unicast, point-to-point connection.
+
+Before a client can use a remote service, the remote service
+must be instantiated on the server and exported to the
+RMI system. (If it is the primary service, it must also be
+named and registered in the RMI Registry).
+<P>
+The Java 2 SDK implementation of RMI adds a new semantic
+for the client-server connection.
+
+In this version, RMI supports activatable remote objects.
+
+When a method call is made to the proxy for an activatable
+object, RMI determines if the remote service implementation object
+is dormant. 
+
+If it is dormant, RMI will instantiate the object and restore
+its state from a disk file.
+
+Once an activatable object is in memory, it behaves just like
+JDK 1.1 remote service implementation objects.
+<P>
+Other types of connection semantics are possible.
+
+For example, with multicast, a single proxy could send a method
+request to multiple implementations simultaneously
+and accept the first reply
+(this improves response time and possibly improves availability).
+
+In the future, Sun may add additional invocation semantics to RMI.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H5><A NAME="RMIArchitectureTransportLayer">Transport Layer</A></H5>
+<P>
+The Transport Layer makes
+the  connection between JVMs.
+
+All connections are stream-based network connectionsthat use TCP/IP.
+<P>
+Even if two JVMs are running on the same physical computer,
+they connect through their host computer's TCP/IP network 
+protocol stack.  
+
+(This is why you must have an operational
+TCP/IP configuration on your computer to run
+the Exercises in this course).
+
+The following diagram shows the unfettered use of
+TCP/IP connections between JVMs.
+<P>
+    <img  src="images/RMITransportLayer_01.gif" alt="[RMI Transport Requires a 
+network connection]" height="157" width="373"/>
+
+<P>
+As you know, TCP/IP provides a persistent, stream-based connection 
+between two machines based on an IP address and port number
+at each end.
+
+Usually a DNS name is used instead of an IP address; this
+means you could talk about a TCP/IP connection between
+<code>flicka.magelang.com:3452</code> and <code>rosa.jguru.com:4432</code>.
+
+In the current release of RMI, TCP/IP connections are used as
+the foundation for all machine-to-machine connections.  
+
+<P>
+On top of TCP/IP, RMI uses a wire level protocol
+called Java Remote Method Protocol (JRMP).
+
+
+JRMP is a proprietary, stream-based protocol that is 
+only partially
+    <CODE>
+<A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/../guide/rmi/spec/rmi-protoc
+ol.doc.html#60">specified</A></CODE>is now in two versions.
+
+The first version was released with the JDK 1.1 version of RMI
+and required the use of Skeleton classes
+on the server.
+
+The second version was released with the Java 2 SDK.
+
+It has been optimized for performance and does not require 
+skeleton classes.
+
+(Note that some alternate implementations, such
+as BEA Weblogic and NinjaRMI <em>do not</em> use JRMP, but instead
+use their own wire level protocol.
+
+ObjectSpace's Voyager does recognize JRMP and will interoperate 
+with RMI at the wire level.)
+<P>
+Sun and IBM have jointly worked on the next version of RMI,
+called  
+<A HREF="RMI.html#AlternateImplementations">RMI-IIOP</A>, which 
+will be available with Java 2 SDK Version 1.3.
+
+The interesting thing about RMI-IIOP is that instead 
+of using JRMP, it will  use the 
+<A HREF="http://www.omg.org">Object Management
+Group</A> (OMG) Internet Inter-ORB Protocol, IIOP, to communicate
+between clients and servers.
+<P>
+The OMG is a group of more than 800 members
+that defines a vendor-neutral,
+distributed object architecture called
+Common Object Request Broker Architecture (CORBA).
+
+CORBA Object Request Broker (ORB) clients and servers
+communicate with each other using IIOP.  
+
+With the  adoption of the Objects-by-Value extension
+to CORBA and the Java Language to IDL Mapping
+proposal, the ground work was set for direct
+RMI to CORBA integration.
+
+
+This new RMI-IIOP implementation supports most of the
+RMI feature set, except for:
+
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/RMISocketFac
+tory.html">java.rmi.server.RMISocketFactory</A></CODE>
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/UnicastRemot
+eObject.html">UnicastRemoteObject</A></CODE>
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/Unreferenced
+.html">Unreferenced</A></CODE>
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    The DGC interfaces
+    </FONT>
+    
+</UL>
+<P>
+The RMI transport layer is designed to make a connection
+between clients and server, even in the face of networking
+obstacles.
+<P>
+While the transport layer prefers to use multiple TCP/IP
+connections, some network configurations only allow a single
+TCP/IP connection between a client and server (some browsers
+restrict applets to a single network connection back to
+their hosting server).
+<P>
+In this case, the transport layer multiplexes multiple virtual
+connections within a single TCP/IP connection.
+<H3><A NAME="NamingRemoteObjects">Naming Remote Objects</A></H3>
+<P>
+During the presentation of the RMI Architecture, one question has
+been repeatedly postponed: &quot;How does a client find an RMI remote
+service?&quot;
+Now you'll find the answer to that question.
+Clients find remote services by using a naming or directory service.
+This may seem like circular logic.
+How can a client locate a service by using a service?
+In fact, that is exactly the case.
+A naming or directory service is run on a well-known host and port
+number.
+<P>
+(<I>Well-known</I> meaning everyone in an organization knowing what it is).
+<P>
+RMI can use many different directory services, including 
+the Java Naming and Directory Interface (JNDI).
+
+RMI itself includes a simple service called the RMI Registry, 
+<CODE>rmiregistry</CODE>.
+
+The RMI Registry runs on each machine that hosts remote service
+objects and accepts queries for services, by default on port 1099.
+<P>
+On a host machine, a server program creates a remote service by 
+first creating a local object that implements that service.
+
+Next, it exports that object to RMI.
+
+When the object is exported, RMI creates a listening service
+that waits for clients to connect and request
+the service.
+
+After exporting, the server registers the object 
+in the RMI Registry under a public name.
+<P>
+On the client side, the RMI Registry is accessed through
+the static class 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Naming.html">Naming
+</A></CODE>.
+
+It provides the method 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Naming.html#lookup"
+>lookup()</A></CODE>
+that a client uses to query a registry.
+
+The method <CODE>lookup()</CODE> accepts a URL
+that specifies the server host name and the name
+of the desired service.
+
+The method returns a remote reference to the service object.
+
+The URL takes the form:
+<pre>
+rmi://&lt;host_name&gt;
+      [:&lt;name_service_port&gt;]
+            /&lt;service_name&gt;
+</pre><P>
+where the <CODE>host_name</CODE> is a name
+recognized on the local area network (LAN) or a DNS name
+on the Internet.
+
+The <CODE>name_service_port</CODE> only needs to be specified
+only if the naming service is running on a different port 
+to the default 1099.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H3><A NAME="UsingRMI">Using RMI</A></H3>
+<P>
+It is now time to build a working RMI system
+and get hands-on experience.
+
+In this section, you will build a simple remote calculator 
+service and use it from a client program.
+<P>
+A working RMI system is composed of several parts. 
+
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Interface definitions for the remote services
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Implementations of the remote services
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Stub and Skeleton files
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    A server to host the remote services
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    An RMI Naming service that allows clients to find the remote services
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    A class file provider (an HTTP or FTP server)
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    A client program that needs the remote services
+    </FONT>
+</UL>
+
+In the next sections, you will build a simple RMI
+system in a step-by-step fashion. 
+
+You are encouraged to create a fresh subdirectory
+on your computer and create these files as you read
+the text.
+<P>
+To simplify things, you will use a single
+directory for the client and server code.
+
+By running the client and the server out of the
+same directory, you will not have to set up an HTTP
+or FTP server to provide the class files.
+
+(Details about how to use HTTP and FTP servers as class
+file providers will be covered in the section on
+<A HREF="RMI.html#RMISoftwareInstallation">Distributing and Installing RMI 
+Software</A>)
+<P>
+Assuming that the RMI system is already designed,
+you take the following steps to build a system:
+<OL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Write and compile Java code for interfaces
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Write and compile Java code for implementation classes
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Generate Stub and Skeleton class files from the implementation classes
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Write Java code for a remote service host program
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Develop Java code for RMI client program
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Install and run RMI system
+    </FONT>
+</OL>
+<P>
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<OL><LI><H4><A NAME="RMIInterfaces2">Interfaces</A></H4>
+<P>
+The first step is to write and compile the Java code
+for the service interface.
+
+The <CODE>Calculator</CODE> interface defines all of the remote
+features offered by the service:
+<pre>
+public interface Calculator 
+          extends java.rmi.Remote {
+    public long add(long a, long b)
+        throws java.rmi.RemoteException;
+
+    public long sub(long a, long b)
+        throws java.rmi.RemoteException;
+
+    public long mul(long a, long b)
+        throws java.rmi.RemoteException;
+
+    public long div(long a, long b)
+        throws java.rmi.RemoteException;
+}
+</pre>
+<P>
+Notice  this interface extends <CODE>Remote</CODE>,
+and each method signature declares that it may
+throw a <CODE>RemoteException</CODE> object.
+<P>
+Copy this file to your directory and compile it with the Java
+compiler:
+<pre>&gt;javac Calculator.java</pre><H4><A 
+NAME="RMIImplementations">Implementation</A></H4>
+<P>
+Next, you write the implementation for the remote service.
+This is the <CODE>CalculatorImpl</CODE> class:
+<pre>
+public class CalculatorImpl
+    extends 
+      java.rmi.server.UnicastRemoteObject
+    implements Calculator {
+
+    // Implementations must have an 
+    //explicit constructor
+    // in order to declare the 
+    //<code>RemoteException exception</code>
+    public CalculatorImpl()
+        throws java.rmi.RemoteException {
+        super();
+    }
+
+    public long add(long a, long b)
+        throws java.rmi.RemoteException {
+        return a + b;
+    }
+
+    public long sub(long a, long b)
+        throws java.rmi.RemoteException {
+        return a - b;
+    }
+
+    public long mul(long a, long b)
+        throws java.rmi.RemoteException {
+        return a * b;
+    }
+
+    public long div(long a, long b)
+        throws java.rmi.RemoteException {
+        return a / b;
+    }
+}
+</pre><P>
+Again, copy this code into your directory and compile it.
+<P>
+The implementation class uses
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/UnicastRemot
+eObject.html">UnicastRemoteObject</A></CODE>
+to link into the RMI system.
+In the example the implementation class directly extends
+<CODE>UnicastRemoteObject</CODE>. 
+
+This is not a requirement.
+
+A class that does not extend <CODE>UnicastRemoteObject</CODE>
+may use its <CODE>exportObject()</CODE> method to be linked into RMI.
+<P>
+When a class extends <CODE>UnicastRemoteObject</CODE>, it must provide
+a constructor that declares that it may throw a <CODE>RemoteException</CODE>
+object.
+
+When this constructor calls <CODE>super()</CODE>, it activates code
+in <CODE>UnicastRemoteObject</CODE> that performs the RMI linking and
+remote object initialization. 
+<LI><H4><A NAME="RMIStubsAndSkeletons">Stubs and Skeletons</A></H4>
+<P>
+You next use the RMI compiler, <CODE>rmic</CODE>, to generate the stub
+and skeleton files.
+
+The compiler runs on the remote service <em>implementation</em> class file.
+<pre>&gt;rmic CalculatorImpl</pre><P>
+Try this in your directory.
+After you run <CODE>rmic</CODE> you should find the file 
+<CODE>Calculator_Stub.class</CODE> and, if you are running the Java 2 SDK, 
+<CODE>Calculator_Skel.class</CODE>.
+<P>
+Options for the JDK 1.1 version of the RMI compiler, <CODE>rmic</CODE>, are:
+<pre>
+Usage: rmic &lt;options&gt; &lt;class names&gt;
+
+where &lt;options&gt; includes:
+  -keep  Do not delete intermediate 
+          generated source files
+  -keepgenerated (same as "-keep")
+  -g     Generate debugging info
+  -depend   Recompile out-of-date 
+            files recursively
+  -nowarn   Generate no warnings
+  -verbose   Output messages about 
+             what the compiler is doing
+  -classpath &lt;path&gt;     Specify where 
+                          to find input source 
+                          and class files
+  -d &lt;directory&gt;   Specify where to 
+              place generated class files
+  -J&lt;runtime flag&gt; Pass argument 
+               to the java interpreter
+</pre><P>
+The Java 2 platform version of <CODE>rmic</CODE> add three new options:
+<pre>
+  -v1.1  Create stubs/skeletons 
+             for JDK 1.1 stub 
+                 protocol version
+  -vcompat  (default) 
+            Create stubs/skeletons compatible 
+                 with both JDK 1.1 and Java 2 
+                     stub protocol versions
+  -v1.2  Create stubs for Java 2 stub protocol 
+                 version only
+</pre>
+<LI><H4><A NAME="RMIHostingServer">Host Server</A></H4>
+<P>
+Remote RMI services must be hosted in a server process.
+The class <CODE>CalculatorServer</CODE> is a very simple server
+that provides the bare essentials for hosting.
+<pre>
+import java.rmi.Naming;
+
+public class CalculatorServer {
+
+  public CalculatorServer() {
+    try {
+      Calculator c = new CalculatorImpl();
+      Naming.rebind("
+      rmi://localhost:1099/
+              CalculatorService", c);
+    } catch (Exception e) {
+      System.out.println("Trouble: " + e);
+    }
+  }
+
+  public static void main(String args[]) {
+    new CalculatorServer();
+  }
+}
+</pre>
+
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<LI><H4><A NAME="RMIClient">Client</A></H4>
+<P>The source code for the client follows:<pre>
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+
+public class CalculatorClient {
+
+    public static void main(String[] args) {
+        try {
+            Calculator c = (Calculator) 
+                          Naming.lookup(
+                "rmi://remotehost 
+                       /CalculatorService");
+            System.out.println( c.sub(4, 3) );
+            System.out.println( c.add(4, 5) );
+            System.out.println( c.mul(3, 6) );
+            System.out.println( c.div(9, 3) );
+        }
+        catch (MalformedURLException murle) {
+            System.out.println();
+            System.out.println(
+              "MalformedURLException");
+            System.out.println(murle);
+        }
+        catch (RemoteException re) {
+            System.out.println();
+            System.out.println(
+                        "RemoteException");
+            System.out.println(re);
+        }
+        catch (NotBoundException nbe) {
+            System.out.println();
+            System.out.println(
+                       "NotBoundException");
+            System.out.println(nbe);
+        }
+        catch (
+            java.lang.ArithmeticException
+                                      ae) {
+            System.out.println();
+            System.out.println(
+             "java.lang.ArithmeticException");
+            System.out.println(ae);
+        }
+    }
+}
+</pre>
+<LI><H4><A NAME="RunningAnRMISystem">Running the RMI System</A></H4>
+<P>
+You are now ready to run the system!
+You need to start three consoles, one for the server, one
+for the client, and one for the RMIRegistry.
+<P>
+Start with the Registry. 
+
+You must be in the directory that
+contains the classes you have written.
+
+From there, enter the following:
+<pre>rmiregistry</pre><P>
+If all goes well, the registry will start running and you can switch
+to the next console.
+<P>
+In the second console start the server hosting the 
+<CODE>CalculatorService</CODE>, and enter the following:
+<pre>&gt;java CalculatorServer</pre><P>
+It will start, load the implementation into memory and wait for
+a client connection.
+<P>
+In the last console, start the client program.
+<pre>&gt;java CalculatorClient</pre><P>
+If all goes well you will see the following output:
+<pre>
+1
+9
+18
+3
+</pre>
+</OL>
+<P>
+That's it; you have created a working RMI system.
+Even though you ran the three consoles on the same computer, RMI
+uses your network stack and TCP/IP to communicate between the
+three separate JVMs.
+
+This is a full-fledged RMI system.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<h3>Exercise</h3>
+<blockquote>
+<ol start="1">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/UMLDefinition/index.html">UML Definition of RMI Example 
+System</A> <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/SimpleBankingSystem/index.html">Simple Banking System</A> </ol>
+</blockquote>
+<H3><A NAME="ParametersInRMI">Parameters in RMI</A></H3>
+<P>
+You have seen that RMI supports method calls to remote objects.  
+
+When these calls involve passing parameters or accepting a 
+return value, how does RMI transfer these
+between JVMs?
+
+What semantics are used?
+
+Does RMI support pass-by-value or pass-by-reference?
+
+The answer depends on whether the parameters are primitive data 
+types, objects, or remote objects.
+<H3><A NAME="SingleJVM">Parameters in a Single JVM</A></H3>
+<P>
+First, review how parameters are passed in a single JVM.
+
+The normal semantics for Java technology is pass-by-value.
+
+When a parameter is passed to a method, the JVM makes a copy of the 
+value, places the copy on the stack and then executes the method.
+
+When the code inside a method uses a parameter, 
+it accesses its stack and uses the copy of the  parameter.
+
+Values returned from methods are also copies.
+<P>
+When a primitive data type 
+(<CODE>boolean</CODE>, <CODE>byte</CODE>, <CODE>short</CODE>, <CODE>int</CODE>, 
+<CODE>long</CODE>, <CODE>char</CODE>, <CODE>float</CODE>, or 
+<CODE>double</CODE>) 
+is passed as a parameter to a method, the mechanics of
+pass-by-value are straightforward.
+
+The mechanics of passing an object as a parameter
+are more complex. 
+
+Recall that an object resides in heap memory and is accessed 
+through one or more reference variables.
+
+And, while the following code makes it look like an object is passed
+to the method <CODE>println()</CODE>
+<pre>
+String s = "Test";
+System.out.println(s);
+</pre><P>
+in the  mechanics it is the reference variable that is
+passed to the method.
+
+In the example, a copy of reference
+variable <CODE>s</CODE> is made (increasing the reference count to the
+<CODE>String</CODE> object by one)
+and is placed on the stack.
+
+Inside the method, code uses the copy of the reference to
+access the object.
+<P>
+Now you will see how RMI passes parameters and return values between 
+remote JVMs.
+<H4><A NAME="PrimitiveParameters">Primitive Parameters</A></H4>
+<P>
+When a primitive data type 
+is passed as a parameter to a remote method, 
+the RMI system passes it by value.  
+
+RMI will make a copy of a primitive data type and send 
+it to the remote method.  
+
+If a method returns a primitive data type, it is also returned to 
+the calling JVM by value.
+<P>
+Values are passed between JVMs in a standard, machine-independent
+format.
+
+This allows JVMs running on different platforms to communicate with
+each other reliably.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H4><A NAME="ObjectParameters">Object Parameters</A></H4>
+<P>
+When an object is passed to a remote method, the semantics change
+from the case of the single JVM.
+
+RMI sends the object itself, not its reference, between JVMs.
+It is the <em>object</em> that is passed by value, not the reference
+to the object.  
+
+Similarly, when a remote method returns an object, 
+a copy of the whole object is returned to the calling program.
+<P>
+Unlike primitive data types, sending an object to a remote 
+JVM is a nontrivial task.  
+
+A Java object can be simple and self-contained, or it could 
+refer to other Java objects in complex graph-like structure.
+
+Because different JVMs do not share heap memory, RMI must
+send the referenced object and all objects it references.
+
+(Passing large object graphs can use a lot of CPU time 
+and network bandwidth.)
+<P>
+RMI uses a technology called <em>Object Serialization</em> 
+to transform an object into a linear format that can
+then be sent over the network wire.  
+
+Object serialization essentially flattens an object 
+and any objects it references.  
+
+Serialized objects can be de-serialized in the memory of the remote JVM
+and made ready for use by a Java program.
+<H4><A NAME="RemoteObjectParameters">Remote Object Parameters</A></H4>
+<P>
+RMI introduces a third type of parameter to consider: remote objects.
+
+As you have 
+<A HREF="RMI.html#NamingRemoteObjects">seen</A>, 
+a client program can obtain a reference to a
+remote object through the RMI Registry program.
+
+There is another way in which a client can obtain a remote reference,
+it can be returned to the client from a method call.
+
+In the following code, the <CODE>BankManager</CODE> service
+<CODE>getAccount()</CODE> method is used to obtain
+a remote reference to an <CODE>Account</CODE> remote service.
+<pre>
+BankManager bm;
+Account     a;
+try {
+    bm = (BankManager) Naming.lookup(
+             "rmi://BankServer
+                  /BankManagerService" 
+         );
+    a  = bm.getAccount( "jGuru" );
+    // Code that uses the account
+}
+catch (RemoteException re) {
+}
+</pre>
+
+<P>
+In the implementation of <CODE>getAccount()</CODE>, the method 
+returns a (local) reference to the remote service.
+<pre>
+public Account 
+   getAccount(String accountName) {
+    // Code to find the matching account
+    AccountImpl ai = 
+     // return reference from search
+    return AccountImpl;
+}
+</pre><P>
+When a method returns a local reference to an exported remote object,
+RMI does not return that object.
+
+Instead, it substitutes another object (the remote proxy for
+that service) in the return stream.
+<P>
+The following diagram illustrates how RMI method calls might be used 
+to:
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Return a remote reference from Server to Client A
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Send the remote reference from Client A to Client B
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Send the remote reference from Client B back to Server
+    </FONT>
+</UL>
+<P>
+    <img  src="images/RemoteReferenceParameterPassing_04.gif" alt="[Remote 
+Reference Parameter Passing]" height="229" width="389"/>
+
+<P>
+Notice that when the <CODE>AccountImpl</CODE> object is returned
+to Client A, the <CODE>Account</CODE> proxy object is substituted.
+
+Subsequent method calls continue to send the reference first
+to Client B and then back to Server.
+
+During this process, the reference continues to refer to 
+one instance of the remote service.
+
+<P>
+It is particularly interesting to note that when the reference is
+returned to Server, it is not converted into a local reference to
+the implementation object.
+
+While this would result in a speed improvement, maintaining
+this indirection ensures that the semantics of using a remote reference
+is maintained.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<h3>Exercise</h3>
+<blockquote>
+<ol start="3">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/RMIParameters/index.html">RMI Parameters</A> </ol>
+</blockquote>
+<H3><A NAME="RMIClientSideCallbacks">RMI Client-side Callbacks</A></H3>
+<P>In many architectures, a server may need to make a remote call to a client.  
+Examples include progress feedback, time tick notifications, warnings of 
+problems, etc.<P>To accomplish this, a client must also act as an RMI server.  
+There is nothing really special about this as RMI works equally well between all 
+computers.  However, it may be impractical for a client to extend <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/UnicastRemot
+eObject.html">java.rmi.server.UnicastRemoteObject</A></CODE>.  In these cases, a 
+remote object may prepare itself for remote use by calling the static method
+
+<pre>
+UnicastRemoteObject.exportObject (&lt;remote_object&gt;)
+</pre>
+
+<h3>Exercise</h3>
+<blockquote>
+<ol start="4">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/RMICallback/index.html">RMI Client Callbacks</A> </ol>
+</blockquote>
+<H3><A NAME="RMISoftwareInstallation">Distributing and Installing RMI 
+Software</A></H3>
+<P>
+RMI adds support for a Distributed Class model to the Java platform
+and extends Java technology's reach to multiple JVMs.
+
+It should not be a surprise that installing an RMI
+system is more involved than 
+setting up a Java runtime on a single computer.
+
+In this section, you will learn about the issues related to installing 
+and distributing an RMI based system.
+<P>
+For the purposes of this section, it is assumed
+that the overall process of designing a DC system
+has led you to the point where you must consider
+the allocation of processing to nodes. And you are trying to
+determine how to install the system onto each node.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H4><A NAME="DistributingRMIClasses">Distributing RMI Classes</A></H4>
+<P>
+To run an RMI application, the supporting class files must be 
+placed in locations that can be found by the server and the clients.
+<P>
+For the server, the following classes must be available to its class loader:
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Remote service interface definitions
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Remote service implementations
+    </FONT>
+
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Skeletons for the implementation classes 
+    (JDK 1.1 based servers only)
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Stubs for the implementation classes
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    All other server classes
+    </FONT>
+    
+</UL><P>
+For the client, the 
+following classes must be available to its 
+class loader:
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Remote service interface definitions
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    Stubs for the remote service implementation classes
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Server classes for 
+objects 
+    used by the client (such as return values)
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    All other client classes
+    </FONT>
+</UL><P>
+Once you know which files must be on the different
+nodes, it is a simple task to make sure they are available to each
+JVM's class loader.
+<H4><A NAME="ClassDistribution">Automatic Distribution of Classes</A></H4>
+<P>
+The RMI designers extended the concept of class loading
+to include the loading of classes from FTP servers
+and HTTP servers.
+
+This is a powerful extension as it means that classes can be deployed
+in one, or only a few places, and all nodes in a RMI
+system will be able to get the proper class files to operate.
+<P>
+RMI supports this remote class loading through the
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/RMIClassLoad
+er.html">RMIClassLoader</A></CODE>.
+
+If a client or server is running an RMI system and it sees that it
+must load a class from a remote location, it calls on the 
+<CODE>RMIClassLoader</CODE> to do this work.
+<P>
+The way RMI loads classes is controlled by a number of properties.
+These properties can be set when each JVM is run:
+<pre>java [ -D&lt;PropertyName&gt;=&lt;PropertyValue&gt; ]+ 
+&lt;ClassFile&gt;</pre><P>
+The property
+<CODE>java.rmi.server.codebase</CODE>
+is used to specify a URL. 
+
+This URL points to a <CODE>file:</CODE>, <CODE>ftp:</CODE>, or 
+<CODE>http:</CODE>
+location that supplies classes for objects that are sent <em>from</em>
+this JVM.
+
+If a program running in a JVM sends an object to another JVM (as
+ the return value from a method), that other JVM needs to load
+ the class file for that object.
+ 
+When RMI sends the object via serialization of RMI embeds the URL
+specified by this parameter into the stream, alongside of the 
+object.
+<P>
+<em>
+Note: RMI does not send class files along 
+with the serialized objects.
+</em>
+<P>
+If the remote JVM needs to load a class file for an object,
+it looks for the embedded URL and contacts the server at that
+location for the file.
+<P>
+When the property
+<CODE>java.rmi.server.useCodebaseOnly</CODE>
+is set to <CODE>true</CODE>, then the JVM will load
+classes from either a location specified by
+the <CODE>CLASSPATH</CODE> environment variable
+or the URL specified in this property.
+<P>
+By using different combinations of the available
+system properties, a number of different
+RMI system configurations can be created.
+<P>
+<em>Closed</em>.
+
+All classes used by clients and the server must be 
+located on the JVM and referenced by the
+<CODE>CLASSPATH</CODE> environment variable.
+
+No dynamic class loading is supported.
+
+<P>
+<em>Server based</em>.
+
+A client applet is loaded from the 
+server's <CODE>CODEBASE</CODE> along with all 
+supporting classes.  
+
+This is similar to the way applets are loaded 
+from the same HTTP server that supports the applet's web page.
+<P>
+<em>Client dynamic</em>.
+
+The primary classes are loaded by referencing the <CODE>CLASSPATH</CODE>
+environment variable of the JVM for the client.
+
+Supporting classes 
+are loaded by the 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/RMIClassLoad
+er.html">java.rmi.server.RMIClassLoader</A></CODE>
+from an HTTP or FTP server on the network at a 
+location specified by the server.
+<P>
+<em>Server-dynamic</em>.
+
+The primary classes are loaded by referencing the <CODE>CLASSPATH</CODE>
+environment variable of the JVM for the server.
+
+Supporting classes are loaded by the 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/RMIClassLoad
+er.html">java.rmi.server.RMIClassLoader</A></CODE>
+from an HTTP or FTP server 
+on the network at a location specified by the client.
+<P>
+<em>Bootstrap client</em>.
+
+In this configuration, <em>all</em> of the client 
+code is loaded from an HTTP or FTP server across the network.  
+
+The only code residing on the client machine is a small bootstrap loader.
+<P>
+<em>Bootstrap server</em>.
+
+In this configuration, <em>all</em> of the server code 
+is loaded from an HTTP or FTP server located on the network.  
+
+The only code residing on the server machine is a 
+small bootstrap loader.
+<P>
+The exercise for this section involves creating a 
+bootstrap client configuration. Please follow the 
+directions carefully as different files need to be 
+placed and compiled within separate directories.
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<h3>Exercise</h3>
+<blockquote>
+<ol start="5">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/BootstrapExample/index.html">Bootstrap Example</A> </ol>
+</blockquote>
+<H4><A NAME="FirewallIssues">Firewall Issues</A></H4>
+<P>
+Firewalls are inevitably encountered by any 
+networked enterprise application that has to operate beyond the 
+sheltering confines of an Intranet. Typically, firewalls 
+block all network traffic, with the exception of those 
+intended for certain &quot;well-known&quot; ports. 
+<P>
+Since the RMI transport layer opens dynamic socket connections between the
+client and the server to facilitate communication, the
+JRMP traffic is typically blocked by most firewall implementations.
+
+But luckily, the RMI designers had anticipated this problem, and a 
+solution is provided by the RMI transport layer itself. 
+
+To get across firewalls, RMI makes use of HTTP tunneling by encapsulating 
+the RMI calls within an HTTP POST request. 
+<P>
+Now, examine how HTTP tunneling of RMI traffic works by 
+taking a closer look at the possible scenarios: the RMI client,
+the server, or both can be operating from behind a firewall.
+
+The following diagram shows the scenario where an RMI client 
+located behind a firewall communicates with an external 
+server.
+<P>
+    <img  src="images/FWALL1.gif" alt="[RMI client communicating with server 
+outside firewall]" height="238" width="400"/>
+
+<P>In the above scenario, when the transport layer tries to establish a 
+connection with the server, it is blocked by the firewall. When this
+happens, the RMI transport layer automatically retries by encapsulating
+the JRMP call data within an HTTP POST request. The HTTP POST header
+for the call is in the form:
+<pre>
+http://hostname:port
+</pre><P>
+If a client is behind a firewall, it is important that you also
+set the system property <CODE>http.proxyHost</CODE> appropriately.
+Since almost all firewalls recognize the HTTP protocol, the specified proxy 
+server should be able to forward the call directly to the port on 
+which the remote server is listening on the outside. Once the 
+HTTP-encapsulated JRMP data is received at the server, it is 
+automatically decoded and dispatched by the RMI transport layer.
+The reply is then sent back to client as HTTP-encapsulated data.
+<P>
+The following diagram shows the scenario when both the 
+RMI client and server are behind firewalls, or when the
+client proxy server can forward data only to the well-known
+HTTP port 80 at the server.
+<P>
+    <img  src="images/FWALL2.gif" alt="[Communication with both RMI client and 
+server behind firewalls]" height="245" width="400"/>
+
+<P>
+In this case, the RMI transport layer uses one additional level
+of indirection! This is because the client can no longer send 
+the HTTP-encapsulated JRMP calls to arbitrary ports as the 
+server is also behind a firewall. Instead, the RMI transport
+layer places JRMP call inside the HTTP packets and send those 
+packets to port 80 of the server. The HTTP POST header is now in 
+the form
+<pre>
+http://hostname:80/cgi-bin/java-rmi?forward=&lt;port&gt;
+</pre><P>
+This causes the execution of the CGI script, <CODE>java-rmi.cgi</CODE>, which
+in turn invokes a local JVM, unbundles the HTTP packet, and forwards
+the call to the server process on the designated port. RMI JRMP-based 
+replies from the server are sent back as HTTP REPLY packets to 
+the originating client port where RMI again unbundles the information 
+and sends it to the appropriate RMI stub.
+<P>
+Of course, for this to work, the <CODE>java-rmi.cgi script</CODE>, which is 
+included within the standard JDK 1.1 or Java 2 platform distribution, 
+must be preconfigured with the path of the Java interpreter 
+and located within the web server's <CODE>cgi-bin</CODE> directory. It is also
+equally important for the RMI server to specify the host's 
+fully-qualified domain name via a system property upon startup to 
+avoid any DNS resolution problems, as:
+<pre>
+java.rmi.server.hostname=host.domain.com
+</pre><P>
+Note: Rather than making use of CGI script for the call forwarding, it is
+more efficient to use a servlet implementation of the same. You
+should be able to obtain the servlet's source code from Sun's 
+<A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/guide/rmi/faq.html#servlet">RMI 
+FAQ</A>.
+<P>
+It should be noted that notwithstanding the built-in mechanism for 
+overcoming firewalls, RMI suffers a significant performance 
+degradation imposed by HTTP tunneling. 
+
+There are other disadvantages to using HTTP tunneling too. For instance,
+your RMI application will no longer be able to multiplex JRMP calls
+on a single connection, since it would now follow a discrete request/response
+protocol. Additionally, using the <CODE>java-rmi.cgi</CODE> script exposes a 
+fairly 
+large security loophole on your server machine, as now, the script
+can redirect any incoming request to any port, completely bypassing your
+firewalling mechanism. Developers should also note that using HTTP
+tunneling precludes RMI applications from using callbacks, which
+in itself could be a major design constraint. Consequently, if a 
+client detects a firewall, it can always disable the default HTTP 
+tunneling feature by setting the property:
+<P>
+<pre>
+java.rmi.server.disableHttp=true
+</pre>
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H3><A NAME="DistributedGarbageCollection">Distributed Garbage 
+Collection</A></H3>
+<P>
+
+
+
+<P>One of the joys of programming for the Java platform is not worrying about 
+memory allocation.  The JVM has an automatic garbage collector that will reclaim 
+the memory from any object that has been discarded by the running program.<P>One 
+of the design objectives for RMI was seamless integration into the Java 
+programming language, which includes garbage collection.  Designing an efficient 
+single-machine garbage collector is hard; designing a distributed garbage 
+collector is very hard.
+
+<P>The RMI system provides a reference counting distributed garbage collection 
+algorithm based on Modula-3's Network Objects.  This system works by having the 
+server keep track of which clients have requested access to remote objects 
+running on the server.  When a reference is made, the server marks the object as 
+"dirty" and when a client drops the reference, it is marked as being 
+"clean."<P>The interface to the DGC (distributed garbage collector) is hidden in 
+the stubs and skeletons layer.  However, a remote object can implement the 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/Unreferenced
+.html">java.rmi.server.Unreferenced</A></CODE> interface and get a notification 
+via the <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/server/Unreferenced
+.html#unreferenced">unreferenced</A></CODE> method when there are no longer any 
+clients holding a live reference.<P>In addition to the reference counting 
+mechanism, a live client reference has a lease with a specified time.  If a 
+client does not refresh the connection to the remote object before the lease 
+term expires, the reference is considered to be dead and the remote object may 
+be garbage collected.  The lease time is controlled by the system property 
+<CODE>java.rmi.dgc.leaseValue</CODE>.  The value is in milliseconds and defaults 
+to 10 minutes.<P>Because of these garbage collection semantics, a client must be 
+prepared to deal with remote objects that have "disappeared."<P>In the following 
+exercise, you will have the opportunity to experiment with the distributed 
+garbage collector.<h3>Exercise</h3>
+<blockquote>
+<ol start="6">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/DistributedGarbageCollector/index.html">Distributed Garbage 
+Collection</A> </ol>
+</blockquote>
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<H3><A NAME="SerializingRemoteObjects">Serializing Remote Objects</A></H3>
+<P>When designing a system using RMI, there are times when you would like to 
+have the flexibility to control where a remote object runs.  Today, when a 
+remote object is brought to life on a particular JVM, it will remain on that 
+JVM.  You cannot "send" the remote object to another machine for execution at a 
+new location.  RMI  makes it difficult to have the option of running a service 
+locally or remotely.<P>The very reason RMI makes it easy to build some 
+distributed application can make it difficult to move objects between JVMs.  
+When you declare that an object implements the <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">java.r
+mi.Remote</A></CODE> interface, RMI will prevent it from being serialized and 
+sent between JVMs as a parameter.  Instead of sending the implementation class 
+for a <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">java.r
+mi.Remote</A></CODE> interface, RMI substitutes the stub class.  Because this 
+substitution occurs in the RMI internal code, one cannot intercept this 
+operation.<P>There are two different ways to solve this problem. 
+
+The first involves manually serializing the remote object and sending it to the 
+other JVM.  To do this, there are two strategies.  The first strategy is to 
+create an <CODE>ObjectInputStream</CODE> and <CODE>ObjectOutputStream</CODE> 
+connection between the two JVMs.  With this, you can explicitly write the remote 
+object to the stream.  The second way is to serialize the object into a 
+<CODE>byte</CODE> array and send the <CODE>byte</CODE> array as the return value 
+to an RMI method call.  Both of these techniques require that you code at a 
+level below RMI and this can lead to extra coding and maintenance 
+complications.<P>In a second strategy, you can use a delegation pattern.  In 
+this pattern, you place the core functionality into a class that:
+
+<UL>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">Does <i>not</i> implement 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">java.r
+mi.Remote</A></CODE></FONT>
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><i>Does</i> implement 
+<CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/io/Serializable.html">j
+ava.io.Serializable</A></CODE></FONT>
+</UL>
+<P>Then you build a remote interface that declares remote access to the 
+functionality.  When you create an implementation of the remote interface, 
+instead of reimplementing the functionality, you allow the remote implementation 
+to defer, or delegate, to an instance of the local version.<P>Now look at the 
+building blocks of this pattern.  Note that this is a very simple example. A 
+real-world example would have a significant number of local fields and methods.
+<pre>
+// Place  functionality in a local object
+public class LocalModel
+implements java.io.Serializable 
+{
+  public String getVersionNumber() 
+  {
+    return "Version 1.0";
+  }
+}
+</pre><P>Next, you declare an <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">java.r
+mi.Remote</A></CODE> interface that defines the same functionality:<pre>
+interface RemoteModelRef
+    extends java.rmi.Remote
+{
+  String getVersionNumber()
+    throws java.rmi.RemoteException;
+}
+</pre><P>The implementation of the remote service accepts a reference to the 
+<CODE>LocalModel</CODE> and delegates the real work to that object:
+
+<pre>
+public class RemoteModelImpl
+    extends 
+      java.rmi.server.UnicastRemoteObject
+    implements RemoteModelRef 
+  {
+  LocalModel lm;
+
+  public RemoteModelImpl (LocalModel lm)
+      throws java.rmi.RemoteException 
+  {
+    super();
+    this.lm = lm;
+  }
+
+  // Delegate to the local 
+  //model implementation
+  public String getVersionNumber()
+      throws java.rmi.RemoteException 
+  {
+    return lm.getVersionNumber();
+  }
+}
+</pre>
+<P>Finally, you define a remote service that provides access to clients.  This 
+is done with a <CODE><A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/rmi/Remote.html">java.r
+mi.Remote</A></CODE> interface and an implementation:<pre>
+interface RemoteModelMgr extends java.rmi.Remote
+{
+  RemoteModelRef getRemoteModelRef()
+    throws java.rmi.RemoteException;
+
+  LocalModel     getLocalModel()
+    throws java.rmi.RemoteException;
+}
+</pre><pre>
+public class RemoteModelMgrImpl
+    extends 
+     java.rmi.server.UnicastRemoteObject
+    implements RemoteModelMgr 
+  {
+  LocalModel lm;
+  RemoteModelImpl rmImpl;
+
+  public RemoteModelMgrImpl()
+      throws java.rmi.RemoteException 
+  {
+    super();
+  }
+
+  public RemoteModelRef getRemoteModelRef()
+      throws java.rmi.RemoteException 
+    {
+    // Lazy instantiation of delgatee
+    if (null == lm) 
+    {
+      lm = new LocalModel();
+    }
+
+    // Lazy instantiation of 
+    //Remote Interface Wrapper
+    if (null == rmImpl) 
+    {
+      rmImpl = new RemoteModelImpl (lm);
+    }
+
+    return ((RemoteModelRef) rmImpl);
+  }
+
+  public LocalModel getLocalModel()
+      throws java.rmi.RemoteException 
+  {
+    // Return a reference to the 
+    //same LocalModel
+    // that exists as the delagetee 
+    //of the RMI remote
+    // object wrapper
+
+    // Lazy instantiation of delgatee
+    if (null == lm) 
+    {
+      lm = new LocalModel();
+    }
+
+    return lm;
+  }
+}
+</pre>
+<P>
+<P ALIGN="RIGHT"><A HREF="#top">Back to Top</A>
+<h3>Exercises</h3>
+<blockquote>
+<ol start="7">
+<LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/LocalRemoteServer/index.html">Serializing Remote Objects: 
+Server</A> <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif"><A 
+HREF="exercises/LocalRemoteClient/index.html">Serializing Remote Objects: 
+Client</A> </ol>
+</blockquote>
+<H3><A NAME="MobileAgentArchitectures">Mobile Agent Architectures</A></H3>
+<P>The solution to the mobile computing agent using RMI is, at best, a 
+work-around.  Other distributed Java architectures have been designed to address 
+this issue and others.  These are collectively called <i>mobile agent 
+architectures</i>.  Some examples are IBM's <A 
+HREF="http://www.alphaWorks.ibm.com/formula/aglets/">Aglets Architecture</A> and 
+<A HREF="http://www.objectspace.com">ObjectSpace's</A> <A 
+HREF="http://www.objectspace.com/Voyager">Voyager System</A>.  These systems are 
+specifically designed to allow and support the movement of Java objects between 
+JVMs, carrying their data along with their execution instructions.<H3><A 
+NAME="AlternateImplementations">Alternate Implementations</A></H3>
+<P>This module 
+has covered the RMI architecture and Sun's implementation.
+
+There are other implementations available, including:<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://www.cs.berkeley.edu/~mdw/proj/ninja/">NinjaRMI</A>
+    <br>
+    A free implementation built at the University of California, Berkeley. 
+    Ninja supports the JDK 1.1 version of RMI, with extensions.
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://www.objectspace.com/products/vgrOverview.htm">BEA Weblogic 
+Server</A>
+    <br>
+    BEA Weblogic Server is a high performance, secure Application 
+    Server that supports RMI, Microsoft COM, CORBA, and EJB (Enterprise 
+JavaBeans), and other
+    services.
+    </FONT>
+    
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://www.objectspace.com/Products/">Voyager</A>
+    <br>
+    ObjectSpace's Voyager product transparently supports RMI along
+    with a proprietary DOM, CORBA, EJB, Microsoft's DCOM, and transaction 
+    services.
+    </FONT>
+    
+</UL><H3><A NAME="AdditionalResources">Additional Resources</A></H3>
+<H4><A NAME="BooksAndArticles">Books and Articles</A></H4>
+<UL>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://hillside.net/patterns/DPBook/DPBook.html"><I>Design 
+Patterns</I></A>, 
+    by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (The Gang of 
+Four)
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+     <A 
+HREF="http://java.sun.com/products/jdk/1.2/docs/guide/rmi/faq.html">Sun's RMI 
+FAQ</A>
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+     <A HREF="http://www.ibm.com/java/jdk/rmi-iiop/">RMI over IIOP</A>
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+     <A HREF="http://archives.java.sun.com/archives/rmi-users.html">RMI-USERS 
+Mailing List Archive</A>
+    </FONT>
+    <LI><FONT FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://www.ddj.com/ftp/1998/1998_03/jqa398.txt"><I>Implementing 
+Callbacks with Java RMI</I></A>, 
+    by Govind Seshadri, Dr. Dobb's Journal, March 1998
+    </FONT>
+
+</UL>
+<P><font FACE="verdana,arial,helvetica" SIZE="1">Copyright 1996-2000 <A 
+HREF="http://www.jguru.com">jGuru.com</A>. All Rights Reserved.</font>
+<P>
+<P>
+<P><A HREF="#top">Back to Top</A><BR>
+<A HREF="index.html">About This Course</A><BR>
+  <A HREF="exercises.html">Exercises</A><BR>
+<P>
+_______<BR>
+<A NAME="TJVM"><SUP>1</SUP></A> As used on this web site, the terms &quot;Java 
+virtual machine&quot; or &quot;JVM&quot; mean a virtual machine for the Java 
+platform.
+
+<!-- ================ -->
+<!-- End Main Content -->
+<!-- ================ -->
+
+</TD>
+</TR>
+</TABLE>
+
+<!-- Copyright Insert -->
+
+<BR CLEAR="ALL">
+
+<FORM ACTION="/cgi-bin/search.cgi" METHOD="POST">
+<TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="5">   
+  <TR>
+    <TD VALIGN="BOTTOM">
+
+
+</TD>
+</TR>
+<A HREF="/servlet/PrintPageServlet"><IMG SRC="/images/printbutton.gif" border=0></A>
+	
+    <CENTER>
+    <FONT SIZE="-1" COLOR="#999999" FACE="Verdana, Arial, Helvetica, sans-serif">
+    [ This page was updated: <!-- new date --> 25-Feb-2000 ]
+</font></CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+  
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/products/">Products &amp; APIs</A> | 
+    <A HREF="/developer/index.html">Developer Connection</A> | 
+    <A HREF="/developer/infodocs/index.shtml">Docs &amp; Training</A> | 
+    <A HREF="/developer/support/index.html">Online Support</A><BR>
+    <A HREF="/developer/community/index.html">Community Discussion</A> |
+    <A HREF="http://java.sun.com/industry/">Industry News</A> | 
+    <A HREF="http://java.sun.com/solutions">Solutions Marketplace</A> | 
+    <A HREF="http://java.sun.com/casestudies">Case Studies</A>
+    </FONT>
+    </CENTER>
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD BGCOLOR="#CCCCCC">
+    <IMG SRC="/images/pixel.gif" HEIGHT="1" WIDTH="1" ALT=""></TD>
+  </TR>
+
+  <TR>
+    <TD ALIGN="CENTER">
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <A HREF="http://java.sun.com/docs/glossary.html">Glossary</A> - 
+    <A HREF="http://java.sun.com/applets/">Applets</A> - 
+    <A HREF="http://java.sun.com/docs/books/tutorial/">Tutorial</A> - 
+    <A HREF="http://java.sun.com/jobs/">Employment</A> - 
+    <A HREF="http://java.sun.com/nav/business/">Business &amp; Licensing</A> - 
+    <A HREF="http://java.sun.com/javastore/">Java Store</A> -
+    <A HREF="http://java.sun.com/casestudies/">Java in the Real World</A>
+    </FONT>
+    </TD>
+  </TR>
+
+  <TR>
+    <TD>
+    <CENTER>
+    <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+    <a href="/siteinfo/faq.html">FAQ</a> |
+    <a href="/feedback/index.html">Feedback</a> | 
+    <a href="http://www.dynamicdiagrams.net/mapa/cgi-bin/help.tcl?db=javasoft&dest=http://java.sun.com/">Map</a> | 
+    <A HREF="http://java.sun.com/a-z/index.html">A-Z Index</A>
+    </FONT>
+    </CENTER>
+
+    </TD>
+  </TR>
+  
+  <TR>
+    <TD>
+
+    <TABLE WIDTH="100%" CELLPADDING="0" BORDER="0" CELLSPACING="0">
+      <TR>
+        <TD WIDTH="50%">
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        For more information on Java technology<BR>
+        and other software from Sun Microsystems, call:<BR>
+        </FONT>
+        <FONT SIZE="-1" FACE="Verdana, Arial, Helvetica, sans-serif">
+        (800) 786-7638<BR></FONT>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Outside the U.S. and Canada, dial your country's 
+        <A HREF="http://www.att.com/business_traveler/attdirecttollfree/">AT&amp;T&nbsp;Direct&nbsp;Access&nbsp;Number</A> first.<BR>
+        </FONT>
+        </TD>
+
+        <TD ALIGN="RIGHT" WIDTH="50%">
+        <A HREF="http://www.sun.com"><IMG SRC="/images/lgsun.gif" width="64" height="30" border="0" ALT="Sun Microsystems, Inc."></A><BR>
+        <FONT SIZE="-2" FACE="Verdana, Arial, Helvetica, sans-serif">
+        Copyright &copy; 1995-2000
+        <A HREF="http://www.sun.com">Sun Microsystems, Inc.</A><BR>
+        All Rights Reserved. 
+        <A HREF="http://www.sun.com/share/text/termsofuse.html">Terms of Use</A>. 
+        <A HREF="http://www.sun.com/privacy/">Privacy&nbsp;Policy</A>.
+        </FONT>
+        </TD>
+      </TR>
+    </TABLE>
+	
+    </TD>
+  </TR> 
+</TABLE>
+</FORM>
+
+<!-- End Copyright Insert -->
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://monash.edu/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:tns="http://monash.edu/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://monash.edu/">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://monash.edu/xsd">
+            <xs:element name="rates">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="hotel" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ratesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:double"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="hotels">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="hotelsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cities">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="citiesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="hotelsRequest">
+        <wsdl:part name="parameters" element="ns:hotels"/>
+    </wsdl:message>
+    <wsdl:message name="hotelsResponse">
+        <wsdl:part name="parameters" element="ns:hotelsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ratesRequest">
+        <wsdl:part name="parameters" element="ns:rates"/>
+    </wsdl:message>
+    <wsdl:message name="ratesResponse">
+        <wsdl:part name="parameters" element="ns:ratesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="citiesRequest">
+        <wsdl:part name="parameters" element="ns:cities"/>
+    </wsdl:message>
+    <wsdl:message name="citiesResponse">
+        <wsdl:part name="parameters" element="ns:citiesResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="HotelBookingServicePortType">
+        <wsdl:operation name="hotels">
+            <wsdl:input message="tns:hotelsRequest" wsaw:Action="urn:hotels"/>
+            <wsdl:output message="tns:hotelsResponse" wsaw:Action="urn:hotelsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="rates">
+            <wsdl:input message="tns:ratesRequest" wsaw:Action="urn:rates"/>
+            <wsdl:output message="tns:ratesResponse" wsaw:Action="urn:ratesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="cities">
+            <wsdl:input message="tns:citiesRequest" wsaw:Action="urn:cities"/>
+            <wsdl:output message="tns:citiesResponse" wsaw:Action="urn:citiesResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="HotelBookingServiceSoap11Binding" type="tns:HotelBookingServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hotels">
+            <soap:operation soapAction="urn:hotels" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="rates">
+            <soap:operation soapAction="urn:rates" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cities">
+            <soap:operation soapAction="urn:cities" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="HotelBookingServiceSoap12Binding" type="tns:HotelBookingServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hotels">
+            <soap12:operation soapAction="urn:hotels" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="rates">
+            <soap12:operation soapAction="urn:rates" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cities">
+            <soap12:operation soapAction="urn:cities" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="HotelBookingServiceHttpBinding" type="tns:HotelBookingServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="hotels">
+            <http:operation location="hotels"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="rates">
+            <http:operation location="rates"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cities">
+            <http:operation location="cities"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="HotelBookingService">
+        <wsdl:port name="HotelBookingServiceHttpSoap11Endpoint" binding="tns:HotelBookingServiceSoap11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/HotelBookingService"/>
+        </wsdl:port>
+        <wsdl:port name="HotelBookingServiceHttpSoap12Endpoint" binding="tns:HotelBookingServiceSoap12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/HotelBookingService"/>
+        </wsdl:port>
+        <wsdl:port name="HotelBookingServiceHttpEndpoint" binding="tns:HotelBookingServiceHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/HotelBookingService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

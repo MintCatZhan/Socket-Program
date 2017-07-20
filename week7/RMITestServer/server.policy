@@ -1,0 +1,4 @@
+grant codeBase "file:D:/RMITestServer/" {
+    permission java.security.AllPermission;
+};
+
